@@ -8,13 +8,21 @@ TODO: Guide users through getting your code up and running on their own system. 
 3.	Latest releases
 4.	API references
 
+## Tools and Extensions
+
+- UVa Online Judge Chrome web extension (https://chrome.google.com/webstore/detail/uva-quick-access-tool/ohmmnbcombfdichbnnlhkijfdmkgllhe)
+
+### VS Code Extensions
+
+- https://github.com/lucastan/uva-node
+
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+Each UVa problem is contained by a single *.cc/*.cpp file, where the file name is the problem ID. Typical compiler used in competition is GCC, and a typical compile operation would look like the following:
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+```
+g++ -std=c++11 123.cc -Wall -o 123
+``` 
+
+# Resources
+TODO: add links and resources.
