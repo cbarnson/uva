@@ -1,0 +1,17 @@
+{
+  "files.associations": {
+    "vector": "cpp",
+    "functional": "cpp",
+    "initializer_list": "cpp",
+    "xutility": "cpp",
+    "iterator": "cpp",
+    "algorithm": "cpp",
+    "limits": "cpp",
+    "numeric": "cpp",
+    "xiosbase": "cpp",
+    "xlocale": "cpp",
+    "iostream": "cpp",
+    "string": "cpp",
+    "xstring": "cpp"
+  }
+}
