@@ -12,6 +12,12 @@
     "xlocale": "cpp",
     "iostream": "cpp",
     "string": "cpp",
-    "xstring": "cpp"
+    "xstring": "cpp",
+    "ostream": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "system_error": "cpp",
+    "xfunctional": "cpp",
+    "xtr1common": "cpp"
   }
 }
