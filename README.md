@@ -16,6 +16,36 @@ TODO: Guide users through getting your code up and running on their own system. 
 
 - https://github.com/lucastan/uva-node
 
+#### uva-node
+
+Useful commands:
+
+- view 123
+- send 123
+- stat
+- tpl show
+
+Command to add UVA account:
+
+- `add uva barnsoc4 <password>`
+
+Command to set user account to default:
+
+- `use uva barnsoc4` or `use`
+
+Command to show user accounts
+
+- `show`
+
+If you need to install:
+
+- clone repo `git clone https://github.com/lucastan/uva-node.git`
+- install globally with `npm install -g uva-node`
+
+To update:
+
+- do `git pull` in the uva-node directory
+
 # Build and Test
 
 Each UVa problem is contained by a single *.cc/*.cpp file, where the file name is the problem ID. Typical compiler used in competition is GCC, and a typical compile operation would look like the following:

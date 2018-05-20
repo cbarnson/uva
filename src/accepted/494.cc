@@ -1,6 +1,6 @@
 // Problem #    : 494
 // Title        : Kindergarten Counting Game
-// Accepted     : No
+// Accepted     : Yes
 // Date         : 20180519
 
 #include <algorithm>
@@ -45,17 +45,6 @@ int main() {
 
     stringstream ss(line);
 
-    // cout << line << endl;
-    // for (int i = 0; i < (int)line.length(); i++) {
-    //   if (isLetter(line[i])) {
-    //     cout << "1";
-    //   } else {
-    //     cout << "0";
-    //   }
-    // }
-    // cout << endl;
-    // return 0;
-
     char c;
 
     // true if last character was a letter
@@ -63,26 +52,33 @@ int main() {
     int word_count = 0;
     while (ss.get(c)) {
 
-      if (isLetter(c)) {
-        if (l) {
-          // c is letter, and last was letter
-          // ==> do nothing
-        } else {
-          // c is letter, but last was not a letter
-          // ==> update last to true
-          l = true;
-        }
-      } else {
-        if (l) {
-          // c is not a letter, but last was a letter
-          // +1 word, update last to false
-          word_count++;
-          l = false;
-        } else {
-          // c is not a letter, and last was not a letter
-          // ==> do nothing
-        }
+      if (isLetter(c) && !l) {
+        l = true;
+      } else if (!isLetter(c) && l) {
+        word_count++;
+        l = false;
       }
+
+      // if (isLetter(c)) {
+      //   if (l) {
+      //     // c is letter, and last was letter
+      //     // ==> do nothing
+      //   } else {
+      //     // c is letter, but last was not a letter
+      //     // ==> update last to true
+      //     l = true;
+      //   }
+      // } else {
+      //   if (l) {
+      //     // c is not a letter, but last was a letter
+      //     // +1 word, update last to false
+      //     word_count++;
+      //     l = false;
+      //   } else {
+      //     // c is not a letter, and last was not a letter
+      //     // ==> do nothing
+      //   }
+      // }
     }
 
     // special case: handle when last was a letter ==> +1 word
