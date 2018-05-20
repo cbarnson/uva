@@ -18,6 +18,12 @@
     "list": "cpp",
     "system_error": "cpp",
     "xfunctional": "cpp",
-    "xtr1common": "cpp"
+    "xtr1common": "cpp",
+    "bitset": "cpp",
+    "queue": "cpp",
+    "stack": "cpp",
+    "type_traits": "cpp",
+    "xhash": "cpp",
+    "xtree": "cpp"
   }
 }

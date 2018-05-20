@@ -38,9 +38,11 @@ int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }
 int lcm(int a, int b) { return a * (b / gcd(a, b)); }
 
 template <typename T>
-void printInitList(initializer_list<T> l) {
-   for (const auto &i : l) cout << i << ' ';
-   cout << endl;
+void printInitList(initializer_list<T> l)
+{
+  for (const auto &i : l)
+    cout << i << ' ';
+  cout << endl;
 }
 
 // variadic function
@@ -55,62 +57,60 @@ const int UNVISITED = -1;
 const int VISITED = 1;
 int dfs_num[100];
 
-void dfs(int s) {
-   dfs_num[s] = VISITED;
-   for (int i = 0; i < (int)g[s].size(); i++) {
-      int v = g[s][i];
-      if (dfs_num[v] == UNVISITED)
-	 dfs(v);
-   }
-   ts.push_back(s);
+void dfs(int s)
+{
+  dfs_num[s] = VISITED;
+  for (int i = 0; i < (int)g[s].size(); i++)
+  {
+    int v = g[s][i];
+    if (dfs_num[v] == UNVISITED)
+      dfs(v);
+  }
+  ts.push_back(s);
 }
 
-int main() {
+int main()
+{
 
-   int tc = 1, n, m;
-   while (cin >> n >> m) {
-      // init
-      ts.clear();
-      g.resize(n);
-      for (auto &i : g) {
-	 i.reserve(n);
-      }
+  int tc = 1, n, m;
+  while (cin >> n >> m)
+  {
+    // init
+    ts.clear();
+    g.resize(n);
+    for (auto &i : g)
+    {
+      i.reserve(n);
+    }
 
-      memset(dfs_num, UNVISITED, sizeof dfs_num);
+    memset(dfs_num, UNVISITED, sizeof dfs_num);
 
-      // read
-      for (int i = 0; i < m; i++) {
-	 int u, v; cin >> u >> v;
-	 g[u].push_back(v);
-      }
+    // read
+    for (int i = 0; i < m; i++)
+    {
+      int u, v;
+      cin >> u >> v;
+      g[u].push_back(v);
+    }
 
-      // process
-      for (int i = 0; i < n; i++) {
-	 if (dfs_num[i] == UNVISITED)
-	    dfs(i);
-      }
+    // process
+    for (int i = 0; i < n; i++)
+    {
+      if (dfs_num[i] == UNVISITED)
+        dfs(i);
+    }
 
-      // output
-      for (int i = (int)ts.size() - 1; i >= 0; i--) {
-	 printf(" %d", ts[i]);
-      }
-      cout << endl;
+    // output
+    for (int i = (int)ts.size() - 1; i >= 0; i--)
+    {
+      printf(" %d", ts[i]);
+    }
+    cout << endl;
+  }
 
-      
+  printf("Case %d: Dilbert should drink beverages in this order: ", tc++);
 
-      
+  // B1 B2 B3 ... BN.
 
-
-
-   }
-
-   
-
-
-
-   printf("Case %d: Dilbert should drink beverages in this order: ", tc++);
-
-   // B1 B2 B3 ... BN.
-   
-   return 0;
+  return 0;
 }
