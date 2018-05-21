@@ -1,5 +1,7 @@
-// Title        :
-// Accepted     : No
+// Problem #    : 113
+// Title        : Power of Cryptography
+// Accepted     : Yes
+// Date         : 20180520
 
 #include <assert.h>
 #include <math.h>
@@ -28,14 +30,13 @@
 
 using namespace std;
 
-typedef vector<vector<int>> vec2d;
-typedef vector<int> vi;
-typedef pair<int, int> ii;
-typedef long long ll;
-
 int main()
 {
-  // template
+  double n, p;
+  while (cin >> n >> p)
+  {
+    cout << setprecision(0) << fixed << exp(log(p) / n) << endl;
+  }
 
   return 0;
 }

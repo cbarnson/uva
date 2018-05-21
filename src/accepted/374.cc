@@ -1,5 +1,7 @@
-// Title        :
-// Accepted     : No
+// Problem #    : 374
+// Title        : Big Mod
+// Accepted     : Yes
+// Date         : 20180521
 
 #include <assert.h>
 #include <math.h>
@@ -28,14 +30,28 @@
 
 using namespace std;
 
-typedef vector<vector<int>> vec2d;
-typedef vector<int> vi;
-typedef pair<int, int> ii;
 typedef long long ll;
+
+// Modular Exponentiation
+ll modexp(ll x, ll n, ll m)
+{
+  if (n == 0)
+    return 1;
+  if (n & 1)
+    return ((x % m) * (modexp(x, n - 1, m))) % m;
+
+  ll y = modexp(x, n / 2, m);
+  return (y * y) % m;
+}
 
 int main()
 {
   // template
+  ll b, p, m;
+  while (cin >> b >> p >> m)
+  {
+    cout << modexp(b, p, m) << endl;
+  }
 
   return 0;
 }
