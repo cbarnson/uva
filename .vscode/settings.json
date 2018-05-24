@@ -28,5 +28,6 @@
     "iomanip": "cpp",
     "iosfwd": "cpp",
     "cmath": "cpp"
-  }
+  },
+  "python.formatting.provider": "autopep8"
 }
