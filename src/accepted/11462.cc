@@ -1,7 +1,7 @@
 // Problem #    : 11462
-// Created on   : 2018-05-23 20:10:09
-// Title        :
-// Accepted     : No
+// Created on   : 2018-05-23 20:31:10
+// Title        : Age Sort
+// Accepted     : Yes
 
 #include <assert.h>
 #include <math.h>
@@ -35,9 +35,22 @@ typedef vector<int> vi;
 typedef pair<int, int> ii;
 typedef long long ll;
 
+int a[2000010];
+
 int main()
 {
-  // template
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+
+  int n;
+  while (cin >> n && n != 0)
+  {
+    for (int i = 0; i < n; i++)
+      cin >> a[i];
+    sort(a, a + n);
+    for (int i = 0; i < n; i++)
+      cout << a[i] << " \n"[i == n - 1];
+  }
 
   return 0;
 }

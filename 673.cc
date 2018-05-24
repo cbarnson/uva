@@ -1,4 +1,6 @@
-// Title        :
+// Problem #    : 673
+// Created on   : 2018-05-23 21:43:24
+// Title        : Parentheses Balance
 // Accepted     : No
 
 #include <assert.h>

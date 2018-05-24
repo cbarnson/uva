@@ -38,5 +38,14 @@ int main()
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
 
+  int n;
+  char arr[110];
+  scanf("%d\n", &n);
+  while (n--)
+  {
+    scanf("0.%[0-9]...\n", &arr); // & is optional when arr is a char array
+    printf("the digits are 0.%s\n", arr);
+  }
+
   return 0;
 }

@@ -1,5 +1,7 @@
-// Title        :
-// Accepted     : No
+// Problem #    : 10041
+// Created on   : 2018-05-23 20:52:48
+// Title        : Vito's family
+// Accepted     : Yes
 
 #include <assert.h>
 #include <math.h>
@@ -33,10 +35,31 @@ typedef vector<int> vi;
 typedef pair<int, int> ii;
 typedef long long ll;
 
+int t, n, median;
+int a[510];
+
 int main()
 {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
+
+  cin >> t;
+  while (t--)
+  {
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+      cin >> a[i];
+    }
+    sort(a, a + n);
+    median = a[n / 2];
+
+    int sum = 0;
+    for_each(a, a + n, [&](int x) {
+      sum += abs(median - x);
+    });
+    cout << sum << endl;
+  }
 
   return 0;
 }
