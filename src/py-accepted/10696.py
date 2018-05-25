@@ -1,3 +1,5 @@
+# Problem No.  : 10696
+# Created on   : 2018-05-24 20:40:23
 import sys
 import functools
 
