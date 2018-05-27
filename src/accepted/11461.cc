@@ -1,7 +1,7 @@
-// Problem #    : 445
-// Created on   : 2018-05-25 00:25:42
-// Title        : Marvelous Mazes
-// Accepted     : No
+// Problem #    : 11461
+// Created on   : 2018-05-26 19:29:34
+// Title        : Square Numbers
+// Accepted     : Yes
 
 #include <assert.h>
 #include <math.h>
@@ -39,6 +39,27 @@ int main()
 {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
+
+  vector<int> v;
+  for (int i = 1; i <= sqrt(100000); i++)
+  {
+    v.push_back(i * i);
+  }
+
+  int a, b;
+  while (cin >> a >> b)
+  {
+    if (a == 0 || b == 0)
+    {
+      break;
+    }
+
+    auto i = lower_bound(v.begin(), v.end(), min(a, b));
+    auto j = upper_bound(v.begin(), v.end(), max(a, b));
+
+    auto k = j - i;
+    cout << k << endl;
+  }
 
   return 0;
 }
