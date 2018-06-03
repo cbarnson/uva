@@ -1,3 +1,5 @@
+// Problem #    : 11636
+// Created on   : 2018-06-02 18:44:55
 
 #include <assert.h>
 #include <math.h>
@@ -35,5 +37,14 @@ int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
 
+  int n, tc = 1;
+
+  while (cin >> n && n > 0) {
+    int p = 0;
+    for (p = 0; n > (1 << p); p++) {
+    }
+
+    cout << "Case " << tc++ << ": " << p << endl;
+  }
   return 0;
 }
