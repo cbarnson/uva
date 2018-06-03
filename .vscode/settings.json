@@ -24,6 +24,8 @@
     "bitset": "cpp",
     "iterator": "cpp",
     "utility": "cpp",
-    "initializer_list": "cpp"
+    "initializer_list": "cpp",
+    "streambuf": "cpp",
+    "memory": "cpp"
   }
 }
