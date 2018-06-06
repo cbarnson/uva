@@ -1,3 +1,5 @@
+// Problem #    : 11805
+// Created on   : 2018-06-05 22:59:46
 
 #include <assert.h>
 #include <math.h>
@@ -34,6 +36,16 @@ typedef long long ll;
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
+
+  int t, n, p, k, tc = 1;
+  cin >> t;
+  while (t--) {
+
+     cin >> n >> k >> p;
+
+     cout << "Case " << tc++ << ": " << (((k - 1) + p) % n) + 1 << endl;
+
+  }
 
   return 0;
 }

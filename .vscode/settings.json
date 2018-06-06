@@ -28,6 +28,10 @@
     "streambuf": "cpp",
     "memory": "cpp",
     "numeric": "cpp",
-    "xfunctional": "cpp"
+    "xfunctional": "cpp",
+    "cmath": "cpp",
+    "complex": "cpp",
+    "xcomplex": "cpp",
+    "type_traits": "cpp"
   }
 }
