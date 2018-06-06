@@ -26,6 +26,8 @@
     "utility": "cpp",
     "initializer_list": "cpp",
     "streambuf": "cpp",
-    "memory": "cpp"
+    "memory": "cpp",
+    "numeric": "cpp",
+    "xfunctional": "cpp"
   }
 }
