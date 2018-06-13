@@ -1,5 +1,6 @@
 {
   "files.associations": {
+    "*.ts": "typescript",
     "algorithm": "cpp",
     "limits": "cpp",
     "iosfwd": "cpp",
@@ -32,6 +33,7 @@
     "cmath": "cpp",
     "complex": "cpp",
     "xcomplex": "cpp",
-    "type_traits": "cpp"
+    "type_traits": "cpp",
+    "iomanip": "cpp"
   }
 }
