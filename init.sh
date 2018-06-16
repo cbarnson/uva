@@ -4,7 +4,7 @@
 FILES=(in out)
 DIRECTORY=src/accepted
 CPP_EXT=.cc
-TEMPLATE=template${CPP_EXT}
+TEMPLATE=src/templates/template${CPP_EXT}
 
 # Usage preamble:
 echo "Usage:" $0 "<next problem> <completed prob file in $(pwd) to move to ${DIRECTORY}>"
