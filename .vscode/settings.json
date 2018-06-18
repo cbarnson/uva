@@ -15,6 +15,23 @@
     "initializer_list": "cpp",
     "queue": "cpp",
     "stack": "cpp",
-    "type_traits": "cpp"
+    "type_traits": "cpp",
+    "limits": "cpp",
+    "xstddef": "cpp",
+    "string": "cpp",
+    "iterator": "cpp",
+    "streambuf": "cpp",
+    "map": "cpp",
+    "ios": "cpp",
+    "tuple": "cpp",
+    "memory": "cpp",
+    "iosfwd": "cpp",
+    "xlocale": "cpp",
+    "xiosbase": "cpp",
+    "iomanip": "cpp",
+    "utility": "cpp",
+    "functional": "cpp",
+    "system_error": "cpp",
+    "unordered_map": "cpp"
   }
 }

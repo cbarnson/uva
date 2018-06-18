@@ -26,10 +26,26 @@
 
 using namespace std;
 
-typedef vector<vector<int>> vec2d;
-typedef vector<int> vi;
-typedef pair<int, int> ii;
+typedef pair<int, int> ii;  // pair of ints
+typedef vector<int> vi;     // 1d vector of ints
+typedef vector<ii> vii;     // 1d vector of pairs
+typedef vector<vi> vvi;     // 2d vector of ints
+typedef vector<vii> vvii;   // 2d vector of pairs
+typedef vector<bool> vb;    // 1d vector of bools
 typedef long long ll;
+
+ostream& operator<<(ostream& os, ii& p) {
+  os << "(" << p.first << ", " << p.second << ")\n";
+}
+
+ostream& operator<<(ostream& os, vi& v) {
+  for (auto& i : v) os << i << " ";
+  os << endl;
+}
+ostream& operator<<(ostream& os, vector<char>& v) {
+  for (auto& i : v) os << i << " ";
+  os << endl;
+}
 
 int main() {
   ios_base::sync_with_stdio(false);
