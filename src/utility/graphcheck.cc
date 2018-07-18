@@ -1,3 +1,5 @@
+// Problem #    : graphcheck
+// Created on   : 2018-06-18 03:26:10
 
 #include <algorithm>
 #include <assert.h>
@@ -26,8 +28,6 @@
 
 using namespace std;
 
-#define sz(a) (int)a.size()
-
 typedef pair<int, int> ii; // pair of ints
 typedef vector<int> vi;    // 1d vector of ints
 typedef vector<ii> vii;    // 1d vector of pairs
@@ -49,6 +49,44 @@ ostream &operator<<(ostream &os, vector<char> &v) {
   for (auto &i : v)
     os << i << " ";
   os << endl;
+}
+
+#define UNVISITED 0
+#define EXPLORED 1
+#define VISITED 2
+
+vvi g;
+vi vis, parent;
+void graphcheck(int u) {
+  vis[u] = EXPLORED;
+  for (auto &v : g[u]) {
+    if (vis[v] == UNVISITED) {
+      parent[v] = u;
+      graphcheck(v);
+    } else if (vis[v] == EXPLORED) {
+      if (v == parent[u])
+        printf("two ways (%d, %d) <--> (%d, %d)\n", u, v, v, u);
+      else
+        printf("back edge (%d, %d) (cycle)\n", u, v);
+    } else if (vis[v] == VISITED) {
+      printf("forward edge (%d, %d)\n", u, v);
+    }
+  }
+  vis[u] = VISITED;
+}
+
+void dfs() {
+  vis.clear();
+  parent.clear();
+  vis.assign((int)g.size(), UNVISITED);
+  parent.assign((int)g.size(), 0);
+
+  int numcmp = 0;
+
+  for (int i = 0; i < (int)g.size(); i++) {
+    if (vis[i] == UNVISITED)
+      printf("component %d:\n", ++numcmp), graphcheck(i);
+  }
 }
 
 int main() {

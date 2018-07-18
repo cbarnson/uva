@@ -14,31 +14,30 @@
  *
  */
 
-#include <iostream>
 #include <algorithm>
 #include <cassert>
+#include <iostream>
 
 using namespace std;
 
 const int MAX_LEN = 20;
 
-int LCS(int A[], int n, int B[], int m, int s[])
-{
-  int L[MAX_LEN+1][MAX_LEN+1];
+int LCS(int A[], int n, int B[], int m, int s[]) {
+  int L[MAX_LEN + 1][MAX_LEN + 1];
   int i, j, k;
-  
+
   for (i = n; i >= 0; i--) {
     for (j = m; j >= 0; j--) {
       if (i == n || j == m) {
-	L[i][j] = 0;
+        L[i][j] = 0;
       } else if (A[i] == B[j]) {
-	L[i][j] = 1 + L[i+1][j+1];
+        L[i][j] = 1 + L[i + 1][j + 1];
       } else {
-	L[i][j] = max(L[i+1][j], L[i][j+1]);
+        L[i][j] = max(L[i + 1][j], L[i][j + 1]);
       }
     }
   }
-  
+
   /* the following is not needed if you are not interested in the sequence */
   k = 0;
   i = j = 0;
@@ -47,9 +46,9 @@ int LCS(int A[], int n, int B[], int m, int s[])
       s[k++] = A[i];
       i++;
       j++;
-    } else if (L[i+1][j] > L[i][j+1]) {
+    } else if (L[i + 1][j] > L[i][j + 1]) {
       i++;
-    } else if (L[i+1][j] < L[i][j+1]) {
+    } else if (L[i + 1][j] < L[i][j + 1]) {
       j++;
     } else {
       /* put tie-breaking conditions here */
@@ -61,13 +60,11 @@ int LCS(int A[], int n, int B[], int m, int s[])
   return L[0][0];
 }
 
-int main(void)
-{
+int main(void) {
   int A[MAX_LEN], B[MAX_LEN], s[MAX_LEN];
   int m, n, i, l;
-  
-  while (cin >> n >> m && 1 <= n && 1 <= m &&
-	 n <= MAX_LEN && m <= MAX_LEN) {
+
+  while (cin >> n >> m && 1 <= n && 1 <= m && n <= MAX_LEN && m <= MAX_LEN) {
     for (i = 0; i < n; i++) {
       cin >> A[i];
     }
