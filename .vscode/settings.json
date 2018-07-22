@@ -34,6 +34,7 @@
     "system_error": "cpp",
     "unordered_map": "cpp",
     "chrono": "cpp",
-    "sstream": "cpp"
+    "sstream": "cpp",
+    "ratio": "cpp"
   }
 }

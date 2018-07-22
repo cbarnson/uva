@@ -1,3 +1,5 @@
+// Problem #    : dfs
+// Created on   : 2018-07-21 14:31:39
 
 #include <algorithm>
 #include <assert.h>
@@ -38,6 +40,22 @@ ostream &operator<<(ostream &os, vi &v) {
   for (auto &i : v)
     os << i << " ";
   os << endl;
+}
+
+vvi g;
+
+void dfsUtil(int s, vb &vis) {
+  vis[s] = true;
+  for (auto &v : g[s]) {
+    if (!vis[v]) {
+      dfsUtil(v, vis);
+    }
+  }
+}
+
+void dfs(int s) {
+  vb vis((int)g.size(), false);
+  dfsUtil(s, vis);
 }
 
 int main() {

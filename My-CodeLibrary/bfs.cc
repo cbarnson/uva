@@ -1,3 +1,5 @@
+// Problem #    : bfs
+// Created on   : 2018-07-21 14:25:56
 
 #include <algorithm>
 #include <assert.h>
@@ -40,9 +42,51 @@ ostream &operator<<(ostream &os, vi &v) {
   os << endl;
 }
 
+#define INF -1
+
+vvi g;
+
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
+
+  // 'n' nodes, 'm' edges
+  int n, m;
+  while (cin >> n >> m) {
+    g.resize(n);
+    for (auto &i : g) {
+      i.reserve(n);
+    }
+
+    // read 'm' directed edges
+    int u, v;
+    for (int i = 0; i < m; i++) {
+      cin >> u >> v;
+      g[u].push_back(v);
+    }
+
+    // 'distance' vector for each node, initially INF
+    vi d(n, INF);
+
+    int src = 0;
+    d[src] = 0;
+    queue<int> q;
+    q.push(src);
+
+    while (!q.empty()) {
+      int u = q.front();
+      q.pop();
+
+      // for each neighbor 'v' of 'u', if INF (i.e. unseen), set to
+      // d[u] + 1 (since step size is always 1 here) and push onto queue
+      for (auto &v : g[u]) {
+        if (d[v] == INF) {
+          d[v] = d[u] + 1;
+          q.push(v);
+        }
+      }
+    }
+  }
 
   return 0;
 }

@@ -1,12 +1,19 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Introduction
+
+TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.
 
 # Getting Started
+
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+
+1.  Installation process
+2.  Software dependencies
+3.  Latest releases
+4.  API references
+
+## Bad/incorrect UVA problem statements
+
+- 459
 
 ## Tools and Extensions
 
@@ -48,11 +55,12 @@ To update:
 
 # Build and Test
 
-Each UVa problem is contained by a single *.cc/*.cpp file, where the file name is the problem ID. Typical compiler used in competition is GCC, and a typical compile operation would look like the following:
+Each UVa problem is contained by a single _.cc/_.cpp file, where the file name is the problem ID. Typical compiler used in competition is GCC, and a typical compile operation would look like the following:
 
 ```
 g++ -std=c++11 123.cc -Wall -o 123
-``` 
+```
 
 # Resources
+
 TODO: add links and resources.
