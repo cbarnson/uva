@@ -66,3 +66,5 @@ if [ "$#" -eq 2 ]; then
 fi
 
 echo "Success!"
+
+emacs $1${CPP_EXT} 2> /dev/null &
