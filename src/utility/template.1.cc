@@ -1,11 +1,6 @@
 
-#include <assert.h>
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
 #include <algorithm>
+#include <assert.h>
 #include <bitset>
 #include <deque>
 #include <functional>
@@ -15,12 +10,17 @@
 #include <limits>
 #include <list>
 #include <map>
+#include <math.h>
 #include <numeric>
 #include <queue>
 #include <set>
 #include <sstream>
 #include <stack>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <string>
+#include <time.h>
 #include <utility>
 #include <vector>
 
@@ -37,20 +37,33 @@ typedef long long ll;
 // First of all, you don't need to name the type you want to use. Second of all
 // it goes forwards and backwards based on (begin > end) condition. e.g. rep(i,
 // 1, 10) is 1, 2, ..., 8, 9 and rep(i, 10, 1) is 9, 8, ..., 2, 1
-#define rep(i, begin, end)                            \
-  for (__typeof(end) i = (begin) - ((begin) > (end)); \
+#define rep(i, begin, end)                                                     \
+  for (__typeof(end) i = (begin) - ((begin) > (end));                          \
        i != (end) - ((begin) > (end)); i += 1 - 2 * ((begin) > (end)))
-typedef tuple<int, int, int> State;  // operator< defined
+typedef tuple<int, int, int> State; // operator< defined
+
+// #define forab(i, a, b)        for (__typeof (b) i = (a) ; i <= b ; ++i)
+// #define rep(i, n)                forab (i, 0, (n) - 1)
+// #define For(i, n)                forab (i, 1, n)
+// #define rofba(i, a, b)        for (__typeof (b)i = (b) ; i >= a ; --i)
+// #define per(i, n)                rofba (i, 0, (n) - 1)
+// #define rof(i, n)                rofba (i, 1, n)
+// #define forstl(i, s)        for (__typeof ((s).end ()) i = (s).begin (); i !=
+// (s).end (); ++i)
+#define REP(i, n) for (int i = 0; i < (int)n; ++i)
+#define FOR(i, c)                                                              \
+  for (__typeof((c).begin()) i = (c).begin(); i != (c).end(); ++i)
+#define ALL(c) (c).begin(), (c).end()
 
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
   int a, b, c;
-  tie(a, b, c) = mt(1, 2, 3);  // assign
-  tie(a, b) = mt(b, a);        // swap(a,b)
+  tie(a, b, c) = mt(1, 2, 3); // assign
+  tie(a, b) = mt(b, a);       // swap(a,b)
 
   vector<pair<int, int>> v;
-  v.eb(a, b);  // shorter and faster than pb(mp(a,b))
+  v.eb(a, b); // shorter and faster than pb(mp(a,b))
 
   // Dijkstra
   priority_queue<tuple<int, int, int>> q;
@@ -74,7 +87,7 @@ int main() {
 
   // -------------
   auto f = [](int a, int b) -> int { return a + b; };
-  cout << f(1, 2);  // prints "3"
+  cout << f(1, 2); // prints "3"
 
   // -----------------
   // copy and copy_n skips the separators (by default: spaces and carriage
