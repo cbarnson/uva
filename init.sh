@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # variables
 FILES=(in out)
