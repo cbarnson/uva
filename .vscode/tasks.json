@@ -5,7 +5,7 @@
   "tasks": [{
     "label": "CompileSingleFileCpp",
     "type": "shell",
-    "command": "g++ -std=c++11 -g -Wall ${fileBasename} -o ${fileBasenameNoExtension}",
+    "command": "g++ -std=c++11 -g ${fileBasename}",
     "promptOnClose": true,
     "group": {
       "kind": "build",
