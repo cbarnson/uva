@@ -33,3 +33,10 @@
 
 # uva-node npm package
 uva-node/
+
+# Problem temp files
+in
+out
+
+# VS Code files
+.vscode/*
