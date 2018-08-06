@@ -39,4 +39,4 @@ in
 out
 
 # VS Code files
-.vscode/*
+.vscode/**
