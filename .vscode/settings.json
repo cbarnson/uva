@@ -69,7 +69,11 @@
     "cwctype": "cpp",
     "forward_list": "cpp",
     "unordered_set": "cpp",
-    "valarray": "cpp"
+    "valarray": "cpp",
+    "future": "cpp",
+    "mutex": "cpp",
+    "thread": "cpp"
   },
-  "C_Cpp.dimInactiveRegions": false
+  "C_Cpp.dimInactiveRegions": false,
+  "C_Cpp.errorSquiggles": "Disabled"
 }
