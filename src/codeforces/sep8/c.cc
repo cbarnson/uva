@@ -1,3 +1,5 @@
+// Problem #    : c
+// Created on   : 2018-09-08 11:43:47
 
 #include <bits/stdc++.h>
 
@@ -11,8 +13,15 @@ typedef pair<int, int> ii;
 typedef vector<int> vi;    
 
 int main() {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
+  int n, a;
+  while (cin >> n) {
 
+     for (int i = 0; i < n; i++) {
+	cin >> a;
+	cout << (a & 1 ? a : a - 1) << " \n"[i == n-1];
+     }
+     
+  }
+  
   return 0;
 }
