@@ -7,7 +7,9 @@ typedef pair<int, int> ii;
 
 int main() {
    
-
+   int n;
+   cin >> n;
+   cout << (n & 1 ? "Ehab" : "Mahmoud") << endl;
 
 
 }
