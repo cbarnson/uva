@@ -9,9 +9,10 @@ const int MM = 1000001;
 
 int P[MM * 2];
 
+// Different approach that just tracks 2 mins, also TLE...
 int main() {
-   // ios_base::sync_with_stdio(false);
-   // cin.tie(NULL);
+   ios_base::sync_with_stdio(false);
+   cin.tie(NULL);
    
    int n;
    while (cin >> n && n) {

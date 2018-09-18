@@ -8,18 +8,15 @@ typedef long long ll;
 typedef pair<int, int> ii;
 
 int n, b;
-
-vector<int> A;
+int A[500001];
 
 bool f(int x) {
-  int y = b - n;
+  int y = b;
 
   REP(i, n) {
-    int c = 1;
-    while (x < ((A[i] + c - 1) / c)) {
-      if (!y) return false;
-      y--; c++;
-    }
+     int c = ((A[i] + x - 1) / x);
+     if (y - c < 0) return false;
+     y -= c;
   }
   return true;
 }
@@ -31,7 +28,6 @@ int main() {
    while (cin >> n >> b) {
      if (n == -1 && b == -1) return 0;
 
-     A.assign(n, 0);
      REP(i, n) {
        cin >> A[i];
      }
