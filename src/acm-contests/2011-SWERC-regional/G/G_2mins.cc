@@ -11,15 +11,13 @@ int P[MM * 2];
 
 // Different approach that just tracks 2 mins, also TLE...
 int main() {
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
    
    int n;
-   while (cin >> n && n) {
+   while (scanf(" %d", &n) == 1 && n) {
 
       
       for (int i = 0; i < n; i++) {
-	 cin >> P[i];
+	 scanf(" %d", &P[i]);
 	 P[i + n] = P[i];
 	 if (i) P[i] += P[i - 1];	 
       }
@@ -60,7 +58,6 @@ int main() {
 	    cnt++;
 	 }
       }
-
-      cout << n - cnt << endl;
+      printf("%d\n", n - cnt);
    }
 }
