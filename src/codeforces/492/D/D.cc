@@ -11,22 +11,6 @@ int main() {
    cin.tie(NULL);
 
 
-   int n, t;
-   char A[52];
-
-   cin >> n >> t;
-   REP(i, n) cin >> A[i];
-
-   REP(j, t) {
-      REP(i, n-1) {
-	 if (A[i] == 'B' && A[i+1] == 'G')
-	    swap(A[i], A[i+1]), i++;
-      }
-   }
-
-   REP(i, n) cout << A[i];   
-   cout << endl;
-
 
 }
 

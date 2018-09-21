@@ -10,24 +10,15 @@ int main() {
    ios_base::sync_with_stdio(false);
    cin.tie(NULL);
 
+   ll r, l, n;
+   cin >> l >> r;
 
-   int n, t;
-   char A[52];
-
-   cin >> n >> t;
-   REP(i, n) cin >> A[i];
-
-   REP(j, t) {
-      REP(i, n-1) {
-	 if (A[i] == 'B' && A[i+1] == 'G')
-	    swap(A[i], A[i+1]), i++;
-      }
+   n = r - l + 1; n >>= 1;
+   cout << "YES" << endl;
+   for (int i = 0; i < n; i++) {
+      cout << l + i << " " << l + i + 1 << endl;
    }
-
-   REP(i, n) cout << A[i];   
-   cout << endl;
-
-
+   
 }
 
 
