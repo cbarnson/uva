@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define FR(i, n) for (int i = 0; i < (n); ++i)
+#define FR(i, n) for (int i = 0; i < (n); i++)
 using namespace std;
 
 typedef long long ll;
@@ -7,14 +7,12 @@ typedef vector<int> vi;
 typedef pair<int, int> ii;
 
 vi D, P;
-vector<vector<ii> > g;
+vector< vector<ii> > g;
 int n, m;
 
 set<ii> ban;
-const int INF = 0x3f3f3f3f;
-
 void dijk(int s) {
-   D.assign(n, INF);
+   D.assign(n, -1);
    P.assign(n, -1);
 
    priority_queue<ii, vector<ii>, greater<ii> > pq;
@@ -27,7 +25,7 @@ void dijk(int s) {
       for (auto &i : g[u]) {
 	 int v = i.second, w = i.first;
 	 if (ban.count(ii(u, v)) != 0) continue;
-	 if (D[v] > D[u] + w) {
+	 if (D[v] == -1 || D[v] > D[u] + w) {
 	    D[v] = D[u] + w;
 	    P[v] = u;
 	    pq.emplace(D[v], v);
@@ -53,8 +51,8 @@ int main() {
    cin >> n >> m;
    g.assign(n, vector<ii>());
 
+   int u, v, w;
    FR(i, m) {
-      int u, v, w;
       cin >> u >> v >> w;
       g[u].push_back(ii(w, v));
       g[v].push_back(ii(w, u));
@@ -66,6 +64,7 @@ int main() {
 	 ban.insert(ii(i, P[i]));
       }
    }
+
    vi pt;
    dijk(0);
    getPath(1, pt);
