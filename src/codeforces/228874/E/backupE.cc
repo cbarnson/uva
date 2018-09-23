@@ -8,7 +8,7 @@ typedef pair<int, int> ii;
 
 const int NN = 200001;
 
-int C[NN], D[NN], K[NN];
+vi C, D, K;
 vector<vi> g;
 
 int centroid(int s, int k) {
@@ -16,20 +16,25 @@ int centroid(int s, int k) {
    while (1) {
       int x = k - C[u], y = -1, yv = -1;
       for (auto &v : g[u])
-	 if (v != e && C[v] >= y)
+	 if (v != e && C[v] > y)
 	    y = C[v], yv = v;
       if (max(x, y) <= k/2) break;
       e = u, u = yv;
+      //cout << "u yv " << u << " " << yv << endl;
    }
    return u;
 }
 
 void dfs(int u, int e) {
    C[u] = K[u];
-   D[u] = D[e] + (u != e);
+   // C[u] = (find_if(K.begin(), K.end(), [=](int x) { return x == u; }) != K.end() ? 1 : 0);
+   if (u != e) D[u] = D[e] + 1;
+   // D[u] = (u == e) ? 0 : D[e] + 1;
    for (auto &v : g[u])
-      if (v != e) 
-	 dfs(v, u), C[u] += C[v];      
+      if (v != e) {
+	 dfs(v, u);
+	 C[u] += C[v];
+      }
 }
 
 int main() {
@@ -39,8 +44,14 @@ int main() {
    int n, k, u, v;
    cin >> n >> k;
 
+   // K.assign(2*k, 0);
+
+   K.assign(n, 0);
+   C.assign(n, 0);
+   D.assign(n, 0);
    FR(i, 2*k) {
       int x; cin >> x; K[x-1] = 1;
+      // cin >> K[i]; K[i]--;
    }
 
    g.assign(n, vi());
@@ -50,26 +61,16 @@ int main() {
    }
 
    dfs(0, 0);
+
    int c = centroid(0, 2*k);
-   cout << "c " << c << endl;
-   
-   fill_n(C, n, 0);
-   fill_n(D, n, 0);
+   fill_n(C.begin(), n, 0);
+   fill_n(D.begin(), n, 0);
    dfs(c, c);
-
-   FR(i, n) {
-      cout << D[i] << "-";
-   }
-   cout << endl;
-
-   FR(i, n) {
-      cout << C[i] << "-";
-   }
-   cout << endl;
 
    int s = 0;
    FR(i, n) s += (K[i] ? D[i] : 0);
-   cout << s << endl;    
+   cout << s << endl;
+    
 }
 
 
