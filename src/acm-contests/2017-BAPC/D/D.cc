@@ -10,26 +10,21 @@ vi D, P;
 vector< vector<ii> > g;
 int n, m;
 
-set<ii> ban;
 void dijk(int s) {
    D.assign(n, -1);
-   P.assign(n, -1);
 
    priority_queue<ii, vector<ii>, greater<ii> > pq;
-   D[s] = 0;
-   pq.emplace(D[s], s);
+   pq.emplace(0, s);
 
    while (!pq.empty()) {
       auto t = pq.top(); pq.pop();
-      int u = t.second;
+      int u = t.second, d = t.first;
+      assert(u >= 0 && u < n);
+      if (D[u] != -1) continue;
+      D[u] = d;
       for (auto &i : g[u]) {
 	 int v = i.second, w = i.first;
-	 if (ban.count(ii(u, v)) != 0) continue;
-	 if (D[v] == -1 || D[v] > D[u] + w) {
-	    D[v] = D[u] + w;
-	    P[v] = u;
-	    pq.emplace(D[v], v);
-	 }
+	 pq.emplace(d + w, v);
       }
    }
 }
@@ -41,6 +36,19 @@ void getPath(int i, vi &path) {
    }
    getPath(P[i], path);
    path.push_back(i);
+}
+
+void dfs(int u, vi &vis) {
+   vis[u] = 1;
+   if (u == 0) return;
+   for (auto &i : g[u]) {
+      int v = i.second, w = i.first;
+      if (!vis[v]) {
+	 if (D[v] == D[u] + w) continue;
+	 dfs(v, vis);
+	 P[v] = u;
+      }
+   }
 }
 
 int main() {
@@ -59,25 +67,20 @@ int main() {
    }
 
    dijk(1);
-   FR(i, n) {
-      if (P[i] != -1) {
-	 ban.insert(ii(i, P[i]));
-      }
-   }
 
+   P.assign(n, -1);
+   vi vis(n, 0);
+   dfs(1, vis);
+   
    vi pt;
-   dijk(0);
-   getPath(1, pt);
-
-   if (pt.front() == 0 && pt.back() == 1) {
+   getPath(0, pt);
+   
+   if (pt.front() == 1 && pt.back() == 0) {
       cout << pt.size();
-      for (auto &i : pt) {
-	 cout << " " << i;
-      }
+      for (int i = pt.size() - 1; i >= 0; i--) cout << " " << pt[i];
       cout << endl;
       return 0;
    }
 
    cout << "impossible" << endl; 
 }
-   

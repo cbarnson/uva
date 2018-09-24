@@ -10,6 +10,12 @@ int main() {
    ios_base::sync_with_stdio(false);
    cin.tie(NULL);
 
+   int n, b = 0, x;
+   cin >> n;
+   FR(i, n) {
+      cin >> x; b += (x < 0 ? x * -1 : x);
+   }
+   cout << b << endl;
 
 
 }
