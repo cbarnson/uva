@@ -19,7 +19,6 @@ void dijk(int s) {
    while (!pq.empty()) {
       auto t = pq.top(); pq.pop();
       int u = t.second, d = t.first;
-      assert(u >= 0 && u < n);
       if (D[u] != -1) continue;
       D[u] = d;
       for (auto &i : g[u]) {
