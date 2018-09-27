@@ -17,21 +17,19 @@ int main() {
    for (auto &x : A) cin >> x;
 
    sort(begin(A), end(A));
-   int k = 0;
-   if (n == 1) d = 0;
-   int i = 0, j = A.size() - 1;
-   while (1) {
-     if (A[j] - A[i] <= d) break;
-     if (A[j] - A[j-1] >= A[i+1] - A[i])
-       j++;
-     else
-       i++;
-     k++;
+
+   auto it = A.begin();
+   int m = 0x3f3f3f3f;
+   while (it != A.end()) {
+
+     int i = it - begin(A);
+     int j = upper_bound(it, end(A), *it + d) - begin(A);
+     m = min(m, n - j + i);
+
+     it = upper_bound(it, end(A), *it);
    }
 
-   cout << k << endl;
-     
-
+   cout << m << endl;
 
 }
 
