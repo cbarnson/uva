@@ -6,33 +6,26 @@ typedef long long ll;
 typedef vector<int> vi;
 typedef pair<int, int> ii;
 
-// bitset<10000010> p;
-// ll sz;
-// vi V;
+int minFac(int n) {
+   int mf, f = 0;
+   if (!n || n == 1) return n;
+   while (!(n & 1)) {
+      n /= 2;
+      mf = (f ? min(mf, 2) : 2), f = 1;
+   }
 
+   for (ll i = 3; i * i <= n; i += 2) {
+      while (n % i == 0) {
+	 n /= i;
+	 mf = (f ? min(mf, (int)i) : i), f = 1;
+      }
+   }
 
+   if (n > 1 || !f)
+      mf = (f ? min(mf, n) : n);
 
-// void sieve(ll P, ll Y) {
-//   sz = min(1000000LL, Y + 1);
-//   p.set(); p[0] = p[1] = 0;
-//   for (ll i = 2; i <= P; i++) {
-//     if (p[i]) {
-//       for (ll j = i * i; j <= Y; j += i) {
-// 	p[j] = 0;
-//       }
-//       V.push_back(i);
-//     }
-//   }
-// }
-
-// bool isP(ll x) {
-//   if (x <= sz) return p[x];
-//   for (int i = 0; i < V.size(); i++)
-//     if (x % V[i] == 0)
-//       return false;
-//   return true;
-// }
-
+   return mf;
+}
 
 int main() {
   ios_base::sync_with_stdio(false);
@@ -41,12 +34,11 @@ int main() {
   ll P, Y;
   cin >> P >> Y;
   for (ll k = Y; k > P; k--) {
-    for (ll i = 2; i <= P && i * i <= Y; i++) {
-      if (k % i == 0) {
+     int mf = minFac(k);
+     if (mf > P) {
 	cout << k << endl;
 	return 0;
-      }
-    }
+     }
   } 
   cout << -1 << endl;
 
