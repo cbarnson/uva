@@ -10,17 +10,31 @@ int main() {
    ios_base::sync_with_stdio(false);
    cin.tie(NULL);
 
-   int a, b;
-   cin >> a >> b;
+   int n, a, b;
+   cin >> n >> a >> b;
 
-   int d = abs(a - b);
-   int o = 0;
-   if (d & 1) o = 1, d--;
+   queue<ii> q;
+   for (int i = 1; i <= n; i++)
+     q.push(ii(i, 0));
 
-   int n = d / 2;
-   int s = n * (n + 1) + (o ? n + 1 : 0);
+   int m = 31 - __builtin_clz(n);
+   while (!q.empty()) {
+     ii u = q.front(); q.pop(); ii v = q.front(); q.pop();
 
-   cout << s << endl;
+     if (u.first == v.first) {
+       if (u.second == m)
+	 cout << "Final!" << endl;
+       else
+	 cout << u.second << endl;
+       return 0;
+     }
+
+     if (u.first == a || u.first == b)
+       q.push(ii(u.first, u.second + 1));
+     else
+       q.push(ii(v.first, v.second + 1));
+       
+   }
 
 }
 

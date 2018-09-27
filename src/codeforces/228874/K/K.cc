@@ -10,8 +10,17 @@ int main() {
    ios_base::sync_with_stdio(false);
    cin.tie(NULL);
 
+   int n;
+   cin >> n;
 
+   set<int> s;
+   FR(i, n) {
+     int x; cin >> x;
+     if (x > 0)
+       s.insert(x);
+   }
 
+   cout << s.size() << endl;
 }
 
 
