@@ -35,6 +35,7 @@ if [ -f ${TEMPLATE} ]; then
     echo $1${CPP_EXT}
     timestamp | cat - ${TEMPLATE} > tmp && mv tmp $1${CPP_EXT}
     echo "// Problem #    : "$1 | cat - $1${CPP_EXT} > tmp && mv tmp $1${CPP_EXT}
+    sed -i 's/\r//' $1${CPP_EXT}
   fi
 fi
 
