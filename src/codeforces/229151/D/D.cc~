@@ -2,9 +2,9 @@
 #define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
+typedef vector<int> vi;
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
 
 int main() {
 
@@ -12,7 +12,6 @@ int main() {
    cin.tie(NULL);
 
    
+
    
-
-
 }
