@@ -1,0 +1,63 @@
+#include <bits/stdc++.h>
+#define FR(i, n) for (int i = 0; i < (n); ++i)
+using namespace std;
+
+typedef long long ll;
+typedef vector<int> vi;
+typedef pair<int, int> ii;
+
+ll dp[3][3005];
+int n;
+vector<ll> C, S;
+
+
+ll f(int i) {
+   if (!(i < (n-2))) return -1;
+
+   if (dp[i]) return dp[i];
+
+   ll ans = -1;
+   for (int j = i + 1; j < n-1; j++) {
+      if (S[i] < S[j]) {
+	 for (int k = j + 1; k < n; k++) {
+	    if (S[j] < S[k]) {
+	       ll a = C[i] + C[j] + C[k];
+	       ans = (ans == -1 ? a : min(ans, a));
+	    }
+	 }
+      }
+   }
+
+   return (dp[i] = ans);
+}
+
+int main() {
+
+   ios_base::sync_with_stdio(false);
+   cin.tie(NULL);
+
+   ll a = 10e9;
+   cout << a << endl;
+		return 0;	       
+		cin >> n;
+
+   C.assign(n, 0LL);
+   S.assign(n, 0LL);
+   FR(i, n) {
+      cin >> S[i];
+   }
+
+   FR(i, n) {
+      cin >> C[i];
+   }
+
+   ll ans = -1;
+   for (int i = 0; i < n; i++) {
+      ll val = f(i);
+      if (val != -1)
+	 ans = (ans == -1 ? val : min(val, ans));
+   }
+   cout << ans << endl;
+
+
+}
