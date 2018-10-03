@@ -3,26 +3,28 @@
 using namespace std;
 
 typedef long long ll;
-typedef vector<int> vi;
 typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 int main() {
   ios_base::sync_with_stdio(false);
   cin.tie(NULL);
 
-  int n, k;
-  cin >> n >> k;
+  int n;
+  cin >> n;
 
-  vi A(n);
+  vector<ll> A(n);
   for (auto &x : A)
     cin >> x;
+  sort(begin(A), end(A));
 
-  int ans = -1;
-  for (auto &x : A) {
-    if (k % x == 0) {
-      int s = k / x;
-      ans = (ans == -1 ? s : min(ans, s));
-    }
+  ll diff = 0;
+  for (int i = 0; i < n; i++) {
+    ll j = i + 1;
+    ll x = A[i] - j;
+    if (x < 0)
+      x *= -1LL;
+    diff += x;
   }
-  cout << ans << endl;
+  cout << diff << endl;
 }
