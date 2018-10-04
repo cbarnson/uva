@@ -3,62 +3,28 @@
 using namespace std;
 
 typedef long long ll;
-typedef vector<int> vi;
+typedef vector<ll> vi;
 typedef pair<ll, ll> ii;
 
-vector<ll> fac(ll n) {
-   if (n < 2) return vector<ll>();
-
-   vector<ll> ans;
-   if (n % 2 == 0) {
-      ans.push_back(2);
-      while (n % 2 == 0) n /= 2;
-   }
-
-   for (ll i = 3; i * i <= n; i += 2) {
-      if (n % i == 0) {
-	 ans.push_back(i);
-	 while (n % i == 0) n /= i;
-      }
-   }
-
-   if (n > 1)
-      ans.push_back(n);
-
-   return ans;
-   
-}
+vector<ii> A(150010, ii(0, 0));
 
 int main() {
+  int n;
+  cin >> n;
 
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
+  ll a, b, c;
+  FR(i, n) {
+    cin >> A[i].first >> A[i].second;
+    if (!i) {
+      c = A[i].first * A[i].second;
+    } else {
+      c = __gcd(c, A[i].first * A[i].second);
+    }
+  }
 
-   int n;
-   cin >> n;
-
-   
-   
-   vector<ii> A(n, ii(0, 0));
-   for (auto &x : A) cin >> x.first >> x.second;
-   vector<ll> f = fac(A[0].first * A[0].second);
-
-   // try each factor, until find ans or run out of factors
-   for (int i = 0; i < (int)f.size(); i++) {
-      ll x = f[i];
-      int good = 1;
-      for (auto &y : A) {
-	 if (__gcd(x, y.first) == 1 && __gcd(x, y.second) == 1) {
-	    good = 0; break;
-	 }
-      }
-
-      if (good) {
-	 cout << x << endl;
-	 return 0;
-      }
-   }
-
-   cout << -1 << endl;
-   
+  FR(i, n) {
+    ll d = __gcd(c, A[i].first);
+    c = d == 1 ? __gcd(c, A[i].second) : d;
+  }
+  cout << (c == 1 ? -1 : c) << endl;
 }
