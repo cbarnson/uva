@@ -57,3 +57,9 @@ Recall that DFA is deterministic finite automaton, where every
 state of a DFA always has exactly one exiting transition arrow
 for each symbol in the alphabet.  
 
+------------------------------------------------------------
+
+Q2 c)
+
+
+
