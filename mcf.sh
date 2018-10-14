@@ -46,9 +46,9 @@ if [ "$#" -eq 1 ]; then
     fi
 
     # if there was an .exe left behind, remove it
-    if [ -f $1".exe" ]; then
-      echo removing unneeded exe $1".exe"
-      rm $1".exe"
+    if [ -f $1 ]; then
+      echo removing unneeded exe $1
+      rm $1
     fi
 
     if [ -f $1${CPP_EXT}~ ]; then
