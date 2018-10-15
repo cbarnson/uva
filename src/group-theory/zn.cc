@@ -12,28 +12,27 @@ int main() {
 
   vector<int> ans;
   
-  for (int i = 1; i < n; i++) {
-    if (gcd(i, n) == 1)
-      ans.push_back(i);
+  for (int i = 0; i < n; i++) {
+    ans.push_back(i);
   }
 
-  cout << "U(" << n << ") = {";
+  cout << "Z_" << n << " = {";
   for (auto &x : ans) {
     cout << " " << x;
   }
-  cout << " }, |U| = " << ans.size() << endl;
+  cout << " }" << endl;
 
   for (auto &x : ans) {
     vector<int> gen;
     int y = x;
     do {
       gen.push_back(y);
-      y = (y * x) % n;
+      y = (y + x) % n;
     } while (y != x);
     
     cout << "<" << x << "> = {";
-    for (auto &y : gen) {
-      cout << " " << y;
+    for (auto &j : gen) {
+      cout << " " << j;
     }
     cout << " }" << endl;
   }
