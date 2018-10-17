@@ -1,0 +1,9 @@
+a b
+\emptyset \emptyset \emptyset
+\Set{q1} \Set{q3} \emptyset
+\Set{q2} \Set{q1,q2} \emptyset
+\Set{q3} \Set{q2} \Set{q2,q3}
+\Set{q1,q2} \Set{q1,q2,q3} \emptyset
+\Set{q2,q3} \Set{q1,q2} \Set{q2,q3}
+\Set{q1,q3} \Set{q2,q3} \Set{q2,q3}
+\Set{q1,q2,q3} \Set{q1,q2,q3} \Set{q2,q3}

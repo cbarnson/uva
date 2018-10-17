@@ -1,0 +1,4 @@
+0 1 \epsilon
+q_1 \Set{q_3} \emptyset \Set{q_2}
+q_2 \Set{q_1} \emptyset \emptyset
+q_3 \Set{q_2} \Set{q_2,q_3} \emptyset
