@@ -44,12 +44,25 @@ if [ "$#" -eq 1 ]; then
         echo warning, $1${CPP_EXT} did not copy to "$DIRECTORY" correctly.. skipping removal step
       fi
     fi
-
+    
     # if there was an .exe left behind, remove it
+    if [ -f $1 ]; then
+      echo removing unneeded exe $1
+      rm $1
+    fi
+    
+    # if there was an .exe (windows) left behind, remove it
     if [ -f $1".exe" ]; then
       echo removing unneeded exe $1".exe"
       rm $1".exe"
     fi
+
+    if [ -f $1${CPP_EXT}~ ]; then
+	rm $1${CPP_EXT}~
+    fi
+
+    find -type f -regex './in[0-9]*~?' -delete
+    
   fi
 fi
 
