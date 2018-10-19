@@ -49,7 +49,7 @@ int main() {
    	       g[i][j] = dist(p[i], p[j]) * 4; // 4 x as long for walk
    	 }
       }
-
+      
       FR (k, n) FR(i, n) FR(j, n) g[i][j] = min(g[i][j], g[i][k] + g[k][j]);
       cout << (int)(g[0][1] * 6 / 4000 + 0.5) << endl;
       
