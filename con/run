@@ -1,5 +1,5 @@
 clear; clear
-g++ $1 -g -Og -std=c++11 -Wall -Wextra -Wshadow -o sol || exit
+g++ $1 -g -Og -std=c++11 -Wall {-Wextra -Wconversion -Wshadow -Wfatal-errors} -o sol || exit
 
 for i in *.in; do
     echo --- $i
