@@ -34,7 +34,7 @@ int main() {
       string l;
       while (getline(cin, l) && l != "") {
    	 stringstream ss(l);
-   	 cin >> p[n].x >> p[n].y, n++;
+   	 ss >> p[n].x >> p[n].y, n++;
    	 while (ss >> p[n].x >> p[n].y) {
    	    if (p[n].x < 0) break;
    	    g[n][n - 1] = dist(p[n], p[n - 1]);
@@ -53,7 +53,7 @@ int main() {
       FR (k, n) FR(i, n) FR(j, n) g[i][j] = min(g[i][j], g[i][k] + g[k][j]);
       cout << (int)(g[0][1] * 6 / 4000 + 0.5) << endl;
       
-      
+      if (t) cout << endl;
       
    }
 
