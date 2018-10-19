@@ -148,42 +148,59 @@ public:
 
 int main() {
   
-  int t;
-  cin >> t;
-  while (t--) {
+  // int t;
+  // cin >> t;
+  // while (t--) {
 
 
-    int m;
-    cin >> m;
+    // int m;
+    // cin >> m;
 
-    vector<int> P(m), Q(m), C(m);
+    // vector<int> P(m), Q(m), C(m);
 
-    for (auto &x : P) cin >> x;
-    for (auto &x : Q) cin >> x;
+    // for (auto &x : P) cin >> x;
+    // for (auto &x : Q) cin >> x;
+ 
+    vi P, Q;
+    string p, q;
+    getline(cin, p);
+    getline(cin, q);
 
+    int x;
+    stringstream ssp(p);
+    while (ssp >> x) { P.push_back(x); }
 
-    permutationGroup A(P, "a"), B(Q, "B");
+    stringstream ssq(q);
+    while (ssq >> x) { Q.push_back(x); }
+    
+    permutationGroup A(P, "A"), B(Q, "B");
     A.print();
     B.print();
 
+    auto C = A * B; C.print();
+
+
+    // auto C = A * B; C.print();
+
     A.cycles();
     B.cycles();
+    C.cycles();
 
     
-    auto BB = B * B; BB.print(); BB.cycles();
-    auto BBB = BB * B; BBB.print(); BBB.cycles();
-    auto BBBB = BBB * B; BBBB.print(); BBBB.cycles();
+    // auto BB = B * B; BB.print(); BB.cycles();
+    // auto BBB = BB * B; BBB.print(); BBB.cycles();
+    // auto BBBB = BBB * B; BBBB.print(); BBBB.cycles();
     
-    auto B2 = B ^ 2; B2.print(); B2.cycles();
-    auto B3 = B ^ 3; B3.print(); B3.cycles();
-    auto B4 = B ^ 4; B4.print(); B4.cycles();
+    // auto B2 = B ^ 2; B2.print(); B2.cycles();
+    // auto B3 = B ^ 3; B3.print(); B3.cycles();
+    // auto B4 = B ^ 4; B4.print(); B4.cycles();
 
-    auto B99 = B ^ 99; B99.print(); B99.cycles();
+    // auto B99 = B ^ 99; B99.print(); B99.cycles();
 
 
-    for (int i = 2; i < 20; i++) {
-      auto Bi = B ^ i; Bi.cycles();
-    }
+    // for (int i = 2; i < 20; i++) {
+    //   auto Bi = B ^ i; Bi.cycles();
+    // }
     
     // auto aB = A * B; aB.print();
     // auto Ba = B * A; Ba.print();
@@ -191,6 +208,6 @@ int main() {
     // auto BB = B * B; BB.print();
     // auto aab = A * aB; aab.print();
     
-  }
+  // }
 
 }

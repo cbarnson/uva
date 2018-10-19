@@ -1,5 +1,8 @@
 #include <bits/stdc++.h>
+#define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
+
+typedef vector<int> vi;
 
 class RMQ {
 public:
