@@ -53,7 +53,7 @@ if [ "$#" -eq 1 ]; then
 
     # if .exe (windows), remove it
     if [ -f $1".exe" ]; then
-	echo removing unneeded exe (windows) $1".exe"
+	echo removing unneeded exe windows $1".exe"
 	rm $1".exe"
     fi
 

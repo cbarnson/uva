@@ -15,9 +15,16 @@ int main() {
    cin.tie(NULL);
 
    int n; cin >> n;
-   vector<string> A(n);
-   FR(i, n) { cin >> A[i]; }
 
+   vector<string> A(n);
+   int cnt = 0;
+   FR(i, n) { cin >> A[i]; cnt += count(begin(A[i]), end(A[i]), '.'); }   
+
+   if (cnt > (n * n) / 4) {
+      cout << "invalid grille" << endl;
+      return 0;
+   }
+   
    auto r = [&](vector<string> &B) {
       vector<string> C = B;
       for (int i = 0; i < n; i++) {
@@ -30,6 +37,8 @@ int main() {
 
    string s;
    cin >> s;
+
+   
    
    
    int m = 0;
@@ -42,13 +51,10 @@ int main() {
 	 FR(j, n) {
 	    if (A[i][j] == '.') {
 	       D[i][j] = s[m++];
-	       if (m == n * n) goto hell;
 	    }
 	 }
       }
    }
-
-  hell:
 
    string ans = "";
    FR(i, n) FR(j, n) ans += D[i][j];
