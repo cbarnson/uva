@@ -13,8 +13,14 @@ int main() {
    ios_base::sync_with_stdio(false);
    cin.tie(NULL);
 
-   
-   
+   int n; cin >> n;
 
+   int s = 0;
+   for (int i = 1; i < n; i++) {
+     s += (n - i) * i;
+   }
+   s += n;
 
+   cout << s << endl;
+   
 }
