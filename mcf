@@ -61,7 +61,24 @@ if [ "$#" -eq 1 ]; then
 	rm $1${CPP_EXT}~
     fi
 
+    # files created as side effect of `run` script
+    if [ -f "o" ]; then
+	rm "o"
+    fi
+
+    if [ -f "t" ]; then
+	rm "t"
+    fi
+
+    if [ -f "sol" ]; then
+	rm "sol"
+    fi
+
+
     find -type f -regex './in[0-9]*~?' -delete
+    find -maxdepth 1 -type f -name '*.in' -delete
+    find -maxdepth 1 -type f -name '*.out' -delete
+    find -maxdepth 1 -type f -name '*.ans' -delete
 
   fi
 fi

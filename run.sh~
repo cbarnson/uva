@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# clear; clear
+g++ $1 -g -Og -std=c++11 -Wall -Wextra -Wconversion -Wshadow -Wfatal-errors -o sol || exit
+
+echo 'hello'
+
+for i in *.in; do
+    echo --- $i
+    ./sol < $i > o && (diff -y o ${i::-3}.[ao]?? > t || cat t) || cat o
+done
