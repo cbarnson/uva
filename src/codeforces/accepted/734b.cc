@@ -1,5 +1,5 @@
-// Problem #    : 456a
-// Created on   : 2018-10-25 11:25:03
+// Problem #    : 734b
+// Created on   : 2018-10-25 20:07:12
 #include <bits/stdc++.h>
 #define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
@@ -13,12 +13,15 @@ int main() {
    ios_base::sync_with_stdio(false);
    cin.tie(NULL);
 
-   // string s;
-   getline(cin, s);
-   if (s == "right answer") {
-      cout << "right answer" << endl;
-   } else
-      cout << "my wrong ans" << endl;
+   int a[4] = {};
+   FR(i, 4) cin >> a[i];
+
+   int y = min(a[0], min(a[2], a[3]));
+   int ans = 256 * y;
+   a[0] -= y;
+   ans += 32 * (min(a[0], a[1]));
+
+   cout << ans << endl;
    
 
 
