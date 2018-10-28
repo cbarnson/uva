@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+#define FR(i, n) for (int i = 0; i < (n); ++i)
+using namespace std;
+
+typedef long long ll;
+typedef vector<int> vi;
+typedef pair<int, int> ii;
+
+int main() {
+
+   ios_base::sync_with_stdio(false);
+   cin.tie(0);
+
+   set<char> vis;
+
+   string s;
+   cin >> s;
+
+   string ans = "";
+   for (int i = 0; i < (int)s.size(); i++) {
+      char c = s[i];
+      if (vis.find(c) == vis.end()) {
+	 vis.insert(c);
+
+	 int cnt = count(begin(s), end(s), c) % 4;
+	 if (cnt > 0) {	    
+	    ans += string(4 - cnt, c);
+	 }
+	 
+      }
+   }
+
+   if (ans == "") {
+      ans = "LLLL";
+   }
+
+   cout << ans << endl;
+
+
+
+}

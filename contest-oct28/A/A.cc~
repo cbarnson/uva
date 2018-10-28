@@ -1,0 +1,133 @@
+#include <bits/stdc++.h>
+#define FR(i, n) for (int i = 0; i < (n); ++i)
+using namespace std;
+
+typedef long long ll;
+typedef vector<int> vi;
+typedef pair<int, int> ii;
+
+
+vector<vi> f(vector<string> &A) {
+
+   vector<vi> B;
+   FR(i, A.size()) {
+      stringstream ss(A[i]);
+      string a, b, c;
+      getline(ss, a, '/');
+      getline(ss, b, '/');
+      ss >> c;
+
+      // cout << a << " " << b << " " << c << endl;
+
+      int x = stoi(a), y = stoi(b), z = stoi(c);
+      // cout << x << " " << y << " " << z << endl;
+      B.push_back({x, y, z});
+   }
+   return B;
+}
+
+int main() {
+
+   ios_base::sync_with_stdio(false);
+   cin.tie(0);
+
+   int n;
+   cin >> n;
+
+   vector<string> A;
+   FR(i, n) {
+      string a;
+      cin >> a;
+      A.push_back(a);
+   }
+      
+   auto B = f(A);
+   // for (auto &x : B) {
+   //    for (auto &y : x) {
+   // 	 cout << " " << y;
+   //    }
+   //    cout << endl;
+   // }
+
+
+   vi P(3);
+   iota(begin(P), end(P), 0);
+   sort(begin(P), end(P));
+
+   int ans = -1;
+   vi S;
+   
+   do {
+
+      bool valid = true;
+
+      // for each given date
+      for (int i = 0; i < B.size(); i++) {
+
+	 // for each field, 3 total
+	 for (int j = 0; j < B[i].size(); j++) {
+
+	    int x = B[i][j];
+	    
+	    if (P[j] == 0) { // day
+	       if (x < 1 || x > 31) {
+		  valid = false;
+		  goto hell;
+	       }
+		  
+	    } else if (P[j] == 1) { // month
+
+	       if (x < 1 || x > 12) {
+		  valid = false;
+		  goto hell;
+	       }
+		    
+	       
+	    } else { // year
+
+	       // anything is valid
+	       
+	    }
+	    
+	 }
+	 
+      }
+
+      if (valid) {
+
+	 if (ans == -1) {
+	    ans = 1;
+	    S = P;
+	 } else {
+	    // already had ans, so now unsure
+	    cout << "UNSURE" << endl;
+	    return 0;
+	 }
+	 
+      }
+     hell:
+      ;
+   } while (next_permutation(begin(P), end(P)));
+
+   if (ans == -1) {
+      // nothing was valid, impossible
+      cout << "IMPOSSIBLE" << endl;
+      return 0;
+   }
+
+   // have ans encoded in S
+   FR(i, 3) {
+      cout << (i ? "/" : "");
+      if (S[i] == 0) {
+	 cout << "DD";
+      } else if (S[i] == 1) {
+	 cout << "MM";
+      } else {
+	 cout << "YY";
+      }      
+   }
+   cout << endl;
+   
+
+
+}

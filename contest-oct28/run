@@ -1,0 +1,10 @@
+#!/bin/sh
+
+f=`ls -t1 *.cc | head -n 1`
+echo $f
+g++ $f -g -Og -std=c++11 -Wall -Wextra -Wconversion -Wshadow -o sol || exit
+
+for i in *.in; do 
+    echo --- $i
+    ./sol < $i > o && (diff -y o ${i::-3}.[ao]?? > t || cat t) || cat o
+done
