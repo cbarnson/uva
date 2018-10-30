@@ -1,0 +1,13 @@
+6
+10
+task 3 starts at least 5 minutes later than task 1
+task 3 starts within 10 minutes of the starting time of task 1
+task 3 starts at least 7 minutes later than task 2
+task 3 starts within 9 minutes of the starting time of task 2
+task 4 starts at least 10 minutes later than task 3
+task 4 starts within 15 minutes of the starting time of task 3
+task 5 starts at least 90 minutes later than task 4
+task 5 starts within 120 minutes of the starting time of task 4
+task 6 starts at least 10 minutes later than task 5
+task 6 starts within 15 minutes of the starting time of task 5
+0
