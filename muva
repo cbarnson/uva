@@ -61,7 +61,19 @@ if [ "$#" -eq 1 ]; then
 	rm $1${CPP_EXT}~
     fi
 
+    toremove=(o t sol)
+    for j in ${toremove[@]}
+    do
+	if [ -f ${j} ]; then
+	    echo removing ${j}...
+	    rm ${j}
+	fi
+    done
+
     find -type f -regex './in[0-9]*~?' -delete
+    find -maxdepth 1 -type f -name '*.in' -delete
+    find -maxdepth 1 -type f -name '*.out' -delete
+    find -maxdepth 1 -type f -name '*.ans' -delete
     
   fi
 fi

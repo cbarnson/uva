@@ -2,9 +2,9 @@
 
 # variables
 FILES=(in out)
-DIRECTORY=src/accepted
+DIRECTORY=$HOME/uva/src/accepted
 CPP_EXT=.cc
-TEMPLATE=src/templates/template${CPP_EXT}
+TEMPLATE=$HOME/uva/src/templates/template${CPP_EXT}
 
 # Usage preamble:
 echo "Usage:" $0 "<next problem> <completed prob file in $(pwd) to move to ${DIRECTORY}>"

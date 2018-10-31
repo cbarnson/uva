@@ -19,8 +19,8 @@ import re
 # User modifiable constants:
 TEMPLATE='default_cf.cc'
 COMPILE_CMD='g++ -g -std=c++11 -Wall $DBG'
-SAMPLE_INPUT='input'
-SAMPLE_OUTPUT='output'
+SAMPLE_INPUT='in'
+SAMPLE_OUTPUT='out'
 MY_OUTPUT='my_output'
 
 # Do not modify these!
@@ -30,6 +30,60 @@ BOLD='\033[1m'
 NORM='\033[0m'
 TIME_CMD='`which time` -o time.out -f "(%es)"'
 TIME_AP='`cat time.out`'
+
+# Problems parser.
+class CodeforcesSingleProblemParser(HTMLParser):
+
+    # def __init__(self, folder):
+    def __init__(self, problem, letter):
+        print('init...')
+        HTMLParser.__init__(self)
+        self.problem = problem
+        self.letter = letter
+        self.num_tests = 0
+        self.testcase = None
+        self.start_copy = False
+        print('...init done')
+    
+    def handle_starttag(self, tag, attrs):
+        print('handle_starttag')
+        if tag == 'div':
+            if attrs == [('class', 'input')]:
+                self.num_tests += 1
+                self.testcase = open(
+                    '%d.%s' % (self.num_tests, SAMPLE_INPUT), 'w')
+            elif attrs == [('class', 'output')]:
+                self.testcase = open(
+                    '%d.%s' % (self.num_tests, SAMPLE_OUTPUT), 'w')
+        elif tag == 'pre':
+            if self.testcase != None:
+                self.start_copy = True
+ 
+    def handle_endtag(self, tag):
+        print('handle_endtag')
+        if tag == 'br':
+            if self.start_copy:
+                self.testcase.write('\n')
+                self.end_line = True
+        if tag == 'pre':
+            if self.start_copy:
+                if not self.end_line:
+                    self.testcase.write('\n')
+                self.testcase.close()
+                self.testcase = None
+                self.start_copy = False
+    
+    def handle_entityref(self, name):
+        print('handle_entityref')
+        if self.start_copy:
+            self.testcase.write(self.unescape(('&%s;' % name)))
+ 
+    def handle_data(self, data):
+        print('handle_data')
+        if self.start_copy:
+            self.testcase.write(data)
+            self.end_line = False
+
 
 # Problems parser.
 class CodeforcesProblemParser(HTMLParser):
@@ -115,6 +169,25 @@ class CodeforcesContestParser(HTMLParser):
         elif self.start_problem:
             self.problem_name += data
         
+
+
+
+
+# (CB) Parses a singple problem page for this contest
+def parse_single_problem(problem, letter):
+    print('in parse_single_problem, problem: %s, letter %s' % (problem, letter))
+    # url = 'http://codeforces.com/contest/%s/problem/%s' % (contest, problem)
+    url = 'http://codeforces.com/problemset/problem/%s/%s' % (problem, letter)
+    print('url: %s' % (url))
+    html = urlopen(url).read()
+    parser = CodeforcesSingleProblemParser(problem, letter)
+    parser.feed(html.decode('utf-8')) 
+    # .encode('utf-8') Should fix special chars problems?
+    return parser.num_tests
+
+
+
+
 # Parses each problem page.
 def parse_problem(folder, contest, problem):
     url = 'http://codeforces.com/contest/%s/problem/%s' % (contest, problem)
@@ -192,29 +265,42 @@ def generate_test_script(folder, num_tests, problem):
 
 # Main function. 
 def main():
-    if(len(argv) < 2):
-        print('USAGE: ./uleth_data.py 512')
+    # only downloading for 1 single problem
+    if(len(argv) < 3):
+        print('USAGE: ./dl.py 512 A')
         return
-    contest = argv[1]
+    problem = argv[1]
+    letter = argv[2]
+    target = "%s%s" % (problem, letter)
+
+    print('Target codeforces problem: %s' % target)
+    x = parse_single_problem(problem, letter)
+    print('Creating C++ template problem %s...' % (target))    
+    call(['new', '%s' % (target)])
+
+    print('All done!')
+    call(['ls'])
+    quit()
+
     
     # Find contest and problems.
-    print ('Parsing contest %s, please wait...' % contest)
-    content = parse_contest(contest)
-    print (BOLD+GREEN_F+'*** Round name: '+content.name+' ***'+NORM)
-    print ('Found %d problems!' % (len(content.problems)))
+    # print ('Parsing contest %s, please wait...' % contest)
+    # content = parse_contest(contest)
+    # print (BOLD+GREEN_F+'*** Round name: '+content.name+' ***'+NORM)
+    # print ('Found %d problems!' % (len(content.problems)))
     
-    # Find problems and test cases.
-    for index, problem in enumerate(content.problems):
-        print ('Downloading Problem %s: %s...' % (problem, content.problem_names[index]))
-        folder = '%s/%s/' % (contest, problem)
-        call(['mkdir', '-p', folder])
-        call(['cp', '-n', TEMPLATE, '%s/%s/%s.cc' % (contest, problem, problem)])
-        num_tests = parse_problem(folder, contest, problem)
-        print('%d sample test(s) found.' % num_tests)
-        generate_test_script(folder, num_tests, problem)
-        print ('========================================')
+    # # Find problems and test cases.
+    # for index, problem in enumerate(content.problems):
+    #     print ('Downloading Problem %s: %s...' % (problem, content.problem_names[index]))
+    #     folder = '%s/%s/' % (contest, problem)
+    #     call(['mkdir', '-p', folder])
+    #     call(['cp', '-n', TEMPLATE, '%s/%s/%s.cc' % (contest, problem, problem)])
+    #     num_tests = parse_problem(folder, contest, problem)
+    #     print('%d sample test(s) found.' % num_tests)
+    #     generate_test_script(folder, num_tests, problem)
+    #     print ('========================================')
         
-    print ('Use ./test.sh to run sample tests in each directory.')
+    # print ('Use ./test.sh to run sample tests in each directory.')
  
 if __name__ == '__main__':
     main()
