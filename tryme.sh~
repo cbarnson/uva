@@ -1,6 +1,0 @@
-#!/bin/sh
-
-f=(a b c d e123)
-for i in ${f[@]}; do
-    echo $i
-done

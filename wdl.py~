@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 # Python 2->3 libraries that were renamed.
 try:
@@ -264,6 +264,7 @@ def generate_test_script(folder, num_tests, problem):
     call(['chmod', '+x', folder + 'test.sh'])
 
 from pathlib import Path
+import datetime
 
 # Main function. 
 def main():
@@ -285,7 +286,7 @@ def main():
         print('Copying...')
         call(['cp', '-n', TEMPLATE, '%s' % (targetCpp)])
         print('Adding header...')
-        line1 = '// Created on   : {:%Y-%b-%d %H:%M:%S}'.format(datetime.datetime.now())
+        line1 = '// Created on   : {:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())
         line2 = '// Problem #    : %s' % (target)
         call("echo %s | cat - %s > tmp && mv tmp %s" % (line1, targetCpp, targetCpp), shell=True)
         call("echo %s | cat - %s > tmp && mv tmp %s" % (line2, targetCpp, targetCpp), shell=True)
@@ -293,10 +294,7 @@ def main():
         print('ERROR, could not locate C++ Template.  Exiting...')
         exit()
 
-    # call(['new', '%s' % (target)])
-    # call(['ls'])
     print('All done!')
-    quit()
 
     
     # Find contest and problems.

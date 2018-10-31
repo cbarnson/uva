@@ -264,6 +264,7 @@ def generate_test_script(folder, num_tests, problem):
     call(['chmod', '+x', folder + 'test.sh'])
 
 from pathlib import Path
+import datetime
 
 # Main function. 
 def main():
@@ -293,10 +294,7 @@ def main():
         print('ERROR, could not locate C++ Template.  Exiting...')
         exit()
 
-    # call(['new', '%s' % (target)])
-    # call(['ls'])
     print('All done!')
-    quit()
 
     
     # Find contest and problems.
