@@ -1,0 +1,6 @@
+def f(i):
+    print(i)
+    return
+
+f(1)
+f(2)

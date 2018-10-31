@@ -72,17 +72,17 @@ if [ "$#" -eq 1 ]; then
     done
 
 
-    # if [ -f "o" ]; then
-    # 	rm "o"
-    # fi
+    if [ -f "o" ]; then
+	rm "o"
+    fi
 
-    # if [ -f "t" ]; then
-    # 	rm "t"
-    # fi
+    if [ -f "t" ]; then
+	rm "t"
+    fi
 
-    # if [ -f "sol" ]; then
-    # 	rm "sol"
-    # fi
+    if [ -f "sol" ]; then
+	rm "sol"
+    fi
 
 
     find -type f -regex './in[0-9]*~?' -delete
