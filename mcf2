@@ -1,0 +1,23 @@
+#!/bin/bash -x
+
+found=`ls -t1 *.cc | head -n 1`
+fileNoExt=${found::-3}
+fileWithExt=$fileNoExt'.cc'
+moveTarget="${HOME}/uva/src/codeforces/accepted"
+
+tmp='tmp'
+for i in {1..10}; do x=$RANDOM; tmp="${tmp}$(((x%10)+1))"; done
+exit
+
+if [ -f ${f::-3}${cc} ]; then
+    echo 'exists'
+    echo 'creating backup...'
+    srcfile="${f::-3}${cc}"
+    cp -n ${srcfile} tmp
+fi
+
+
+if [ -f "${g}${cc}" ]; then
+    myf="${g}${cc}"
+    echo "$g --> ${myf}"
+fi
