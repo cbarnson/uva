@@ -1,0 +1,1801 @@
+weight: 128							      |	12
+0 --> 1, w = 20							      <
+====== in H, w = 20							      <
+1 --> 0, w = 10							      <
+====== in H, w = 10							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 130							      <
+0 --> 1, w = 20							      <
+====== in H, w = 21							      <
+1 --> 0, w = 10							      <
+====== in H, w = 11							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 132							      <
+0 --> 1, w = 20							      <
+====== in H, w = 22							      <
+1 --> 0, w = 10							      <
+====== in H, w = 12							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 134							      <
+0 --> 1, w = 20							      <
+====== in H, w = 23							      <
+1 --> 0, w = 10							      <
+====== in H, w = 13							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 136							      <
+0 --> 1, w = 20							      <
+====== in H, w = 24							      <
+1 --> 0, w = 10							      <
+====== in H, w = 14							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 138							      <
+0 --> 1, w = 20							      <
+====== in H, w = 25							      <
+1 --> 0, w = 10							      <
+====== in H, w = 15							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 140							      <
+0 --> 1, w = 20							      <
+====== in H, w = 26							      <
+1 --> 0, w = 10							      <
+====== in H, w = 16							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 142							      <
+0 --> 1, w = 20							      <
+====== in H, w = 27							      <
+1 --> 0, w = 10							      <
+====== in H, w = 17							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 144							      <
+0 --> 1, w = 20							      <
+====== in H, w = 28							      <
+1 --> 0, w = 10							      <
+====== in H, w = 18							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 146							      <
+0 --> 1, w = 20							      <
+====== in H, w = 29							      <
+1 --> 0, w = 10							      <
+====== in H, w = 19							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 148							      <
+0 --> 1, w = 20							      <
+====== in H, w = 30							      <
+1 --> 0, w = 10							      <
+====== in H, w = 20							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 150							      <
+0 --> 1, w = 20							      <
+====== in H, w = 31							      <
+1 --> 0, w = 10							      <
+====== in H, w = 21							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 152							      <
+0 --> 1, w = 20							      <
+====== in H, w = 32							      <
+1 --> 0, w = 10							      <
+====== in H, w = 22							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 154							      <
+0 --> 1, w = 20							      <
+====== in H, w = 33							      <
+1 --> 0, w = 10							      <
+====== in H, w = 23							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 156							      <
+0 --> 1, w = 20							      <
+====== in H, w = 34							      <
+1 --> 0, w = 10							      <
+====== in H, w = 24							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 158							      <
+0 --> 1, w = 20							      <
+====== in H, w = 35							      <
+1 --> 0, w = 10							      <
+====== in H, w = 25							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 160							      <
+0 --> 1, w = 20							      <
+====== in H, w = 36							      <
+1 --> 0, w = 10							      <
+====== in H, w = 26							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 162							      <
+0 --> 1, w = 20							      <
+====== in H, w = 37							      <
+1 --> 0, w = 10							      <
+====== in H, w = 27							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 164							      <
+0 --> 1, w = 20							      <
+====== in H, w = 38							      <
+1 --> 0, w = 10							      <
+====== in H, w = 28							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 166							      <
+0 --> 1, w = 20							      <
+====== in H, w = 39							      <
+1 --> 0, w = 10							      <
+====== in H, w = 29							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 168							      <
+0 --> 1, w = 20							      <
+====== in H, w = 40							      <
+1 --> 0, w = 10							      <
+====== in H, w = 30							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 170							      <
+0 --> 1, w = 20							      <
+====== in H, w = 41							      <
+1 --> 0, w = 10							      <
+====== in H, w = 31							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 172							      <
+0 --> 1, w = 20							      <
+====== in H, w = 42							      <
+1 --> 0, w = 10							      <
+====== in H, w = 32							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 174							      <
+0 --> 1, w = 20							      <
+====== in H, w = 43							      <
+1 --> 0, w = 10							      <
+====== in H, w = 33							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 176							      <
+0 --> 1, w = 20							      <
+====== in H, w = 44							      <
+1 --> 0, w = 10							      <
+====== in H, w = 34							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 178							      <
+0 --> 1, w = 20							      <
+====== in H, w = 45							      <
+1 --> 0, w = 10							      <
+====== in H, w = 35							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 180							      <
+0 --> 1, w = 20							      <
+====== in H, w = 46							      <
+1 --> 0, w = 10							      <
+====== in H, w = 36							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 182							      <
+0 --> 1, w = 20							      <
+====== in H, w = 47							      <
+1 --> 0, w = 10							      <
+====== in H, w = 37							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 184							      <
+0 --> 1, w = 20							      <
+====== in H, w = 48							      <
+1 --> 0, w = 10							      <
+====== in H, w = 38							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 186							      <
+0 --> 1, w = 20							      <
+====== in H, w = 49							      <
+1 --> 0, w = 10							      <
+====== in H, w = 39							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 188							      <
+0 --> 1, w = 20							      <
+====== in H, w = 50							      <
+1 --> 0, w = 10							      <
+====== in H, w = 40							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 190							      <
+0 --> 1, w = 20							      <
+====== in H, w = 51							      <
+1 --> 0, w = 10							      <
+====== in H, w = 41							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 192							      <
+0 --> 1, w = 20							      <
+====== in H, w = 52							      <
+1 --> 0, w = 10							      <
+====== in H, w = 42							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 194							      <
+0 --> 1, w = 20							      <
+====== in H, w = 53							      <
+1 --> 0, w = 10							      <
+====== in H, w = 43							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 196							      <
+0 --> 1, w = 20							      <
+====== in H, w = 54							      <
+1 --> 0, w = 10							      <
+====== in H, w = 44							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 198							      <
+0 --> 1, w = 20							      <
+====== in H, w = 55							      <
+1 --> 0, w = 10							      <
+====== in H, w = 45							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 200							      <
+0 --> 1, w = 20							      <
+====== in H, w = 56							      <
+1 --> 0, w = 10							      <
+====== in H, w = 46							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 202							      <
+0 --> 1, w = 20							      <
+====== in H, w = 57							      <
+1 --> 0, w = 10							      <
+====== in H, w = 47							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 204							      <
+0 --> 1, w = 20							      <
+====== in H, w = 58							      <
+1 --> 0, w = 10							      <
+====== in H, w = 48							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 206							      <
+0 --> 1, w = 20							      <
+====== in H, w = 59							      <
+1 --> 0, w = 10							      <
+====== in H, w = 49							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 208							      <
+0 --> 1, w = 20							      <
+====== in H, w = 60							      <
+1 --> 0, w = 10							      <
+====== in H, w = 50							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 210							      <
+0 --> 1, w = 20							      <
+====== in H, w = 61							      <
+1 --> 0, w = 10							      <
+====== in H, w = 51							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 212							      <
+0 --> 1, w = 20							      <
+====== in H, w = 62							      <
+1 --> 0, w = 10							      <
+====== in H, w = 52							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 214							      <
+0 --> 1, w = 20							      <
+====== in H, w = 63							      <
+1 --> 0, w = 10							      <
+====== in H, w = 53							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 216							      <
+0 --> 1, w = 20							      <
+====== in H, w = 64							      <
+1 --> 0, w = 10							      <
+====== in H, w = 54							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 218							      <
+0 --> 1, w = 20							      <
+====== in H, w = 65							      <
+1 --> 0, w = 10							      <
+====== in H, w = 55							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 220							      <
+0 --> 1, w = 20							      <
+====== in H, w = 66							      <
+1 --> 0, w = 10							      <
+====== in H, w = 56							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 222							      <
+0 --> 1, w = 20							      <
+====== in H, w = 67							      <
+1 --> 0, w = 10							      <
+====== in H, w = 57							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 224							      <
+0 --> 1, w = 20							      <
+====== in H, w = 68							      <
+1 --> 0, w = 10							      <
+====== in H, w = 58							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 226							      <
+0 --> 1, w = 20							      <
+====== in H, w = 69							      <
+1 --> 0, w = 10							      <
+====== in H, w = 59							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 228							      <
+0 --> 1, w = 20							      <
+====== in H, w = 70							      <
+1 --> 0, w = 10							      <
+====== in H, w = 60							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 230							      <
+0 --> 1, w = 20							      <
+====== in H, w = 71							      <
+1 --> 0, w = 10							      <
+====== in H, w = 61							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 232							      <
+0 --> 1, w = 20							      <
+====== in H, w = 72							      <
+1 --> 0, w = 10							      <
+====== in H, w = 62							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 234							      <
+0 --> 1, w = 20							      <
+====== in H, w = 73							      <
+1 --> 0, w = 10							      <
+====== in H, w = 63							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 236							      <
+0 --> 1, w = 20							      <
+====== in H, w = 74							      <
+1 --> 0, w = 10							      <
+====== in H, w = 64							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 238							      <
+0 --> 1, w = 20							      <
+====== in H, w = 75							      <
+1 --> 0, w = 10							      <
+====== in H, w = 65							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 240							      <
+0 --> 1, w = 20							      <
+====== in H, w = 76							      <
+1 --> 0, w = 10							      <
+====== in H, w = 66							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 242							      <
+0 --> 1, w = 20							      <
+====== in H, w = 77							      <
+1 --> 0, w = 10							      <
+====== in H, w = 67							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 244							      <
+0 --> 1, w = 20							      <
+====== in H, w = 78							      <
+1 --> 0, w = 10							      <
+====== in H, w = 68							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 246							      <
+0 --> 1, w = 20							      <
+====== in H, w = 79							      <
+1 --> 0, w = 10							      <
+====== in H, w = 69							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 248							      <
+0 --> 1, w = 20							      <
+====== in H, w = 80							      <
+1 --> 0, w = 10							      <
+====== in H, w = 70							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 250							      <
+0 --> 1, w = 20							      <
+====== in H, w = 81							      <
+1 --> 0, w = 10							      <
+====== in H, w = 71							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 252							      <
+0 --> 1, w = 20							      <
+====== in H, w = 82							      <
+1 --> 0, w = 10							      <
+====== in H, w = 72							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 254							      <
+0 --> 1, w = 20							      <
+====== in H, w = 83							      <
+1 --> 0, w = 10							      <
+====== in H, w = 73							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 256							      <
+0 --> 1, w = 20							      <
+====== in H, w = 84							      <
+1 --> 0, w = 10							      <
+====== in H, w = 74							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 258							      <
+0 --> 1, w = 20							      <
+====== in H, w = 85							      <
+1 --> 0, w = 10							      <
+====== in H, w = 75							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 260							      <
+0 --> 1, w = 20							      <
+====== in H, w = 86							      <
+1 --> 0, w = 10							      <
+====== in H, w = 76							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 262							      <
+0 --> 1, w = 20							      <
+====== in H, w = 87							      <
+1 --> 0, w = 10							      <
+====== in H, w = 77							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 264							      <
+0 --> 1, w = 20							      <
+====== in H, w = 88							      <
+1 --> 0, w = 10							      <
+====== in H, w = 78							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 266							      <
+0 --> 1, w = 20							      <
+====== in H, w = 89							      <
+1 --> 0, w = 10							      <
+====== in H, w = 79							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 268							      <
+0 --> 1, w = 20							      <
+====== in H, w = 90							      <
+1 --> 0, w = 10							      <
+====== in H, w = 80							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 270							      <
+0 --> 1, w = 20							      <
+====== in H, w = 91							      <
+1 --> 0, w = 10							      <
+====== in H, w = 81							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 272							      <
+0 --> 1, w = 20							      <
+====== in H, w = 92							      <
+1 --> 0, w = 10							      <
+====== in H, w = 82							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 274							      <
+0 --> 1, w = 20							      <
+====== in H, w = 93							      <
+1 --> 0, w = 10							      <
+====== in H, w = 83							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 276							      <
+0 --> 1, w = 20							      <
+====== in H, w = 94							      <
+1 --> 0, w = 10							      <
+====== in H, w = 84							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 278							      <
+0 --> 1, w = 20							      <
+====== in H, w = 95							      <
+1 --> 0, w = 10							      <
+====== in H, w = 85							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 280							      <
+0 --> 1, w = 20							      <
+====== in H, w = 96							      <
+1 --> 0, w = 10							      <
+====== in H, w = 86							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 282							      <
+0 --> 1, w = 20							      <
+====== in H, w = 97							      <
+1 --> 0, w = 10							      <
+====== in H, w = 87							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 284							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 88							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 285							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 89							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 286							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 90							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 287							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 91							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 288							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 92							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 289							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 93							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 290							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 94							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 291							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 95							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 292							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 96							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 293							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 97							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+weight: 294							      <
+0 --> 1, w = 20							      <
+====== in H, w = 98							      <
+1 --> 0, w = 10							      <
+====== in H, w = 98							      <
+2 --> 2, w = 98							      <
+====== in H, w = 98							      <
+longest time spend by any : 98							      <
+T : 166							      <
+166							      <
