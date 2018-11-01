@@ -284,12 +284,19 @@ def main():
     targetCpp = target + '.cc'
     if (cppTemplate.exists() and cppTemplate.is_file()):
         print('Copying...')
-        call(['cp', '-n', TEMPLATE, '%s' % (targetCpp)])
+        call('cp -n %s %s' % (TEMPLATE, targetCpp), shell=True)
+        # call(['cp', '-n', TEMPLATE, '%s' % (targetCpp)])
+        call("ls")
         print('Adding header...')
-        line1 = '// Created on   : {:%Y-%b-%d %H:%M:%S}'.format(datetime.datetime.now())
-        line2 = '// Problem #    : %s' % (target)
+        line1 = '// Created on : {:%Y-%b-%d %H:%M:%S}'.format(datetime.datetime.now())
         call("echo %s | cat - %s > tmp && mv tmp %s" % (line1, targetCpp, targetCpp), shell=True)
+        # call("cat %s" % (targetCpp))
+        # line2 = '// Problem \#    : %s' % (target)
+        print('targetCpp = %s' % targetCpp)
+        line2='// Problem \#\ \ : %s' % target
         call("echo %s | cat - %s > tmp && mv tmp %s" % (line2, targetCpp, targetCpp), shell=True)
+        call("cat %s" % (targetCpp), shell=True)
+
     else:
         print('ERROR, could not locate C++ Template.  Exiting...')
         exit()
