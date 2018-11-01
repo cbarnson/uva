@@ -33,3 +33,4 @@ for i in *.in; do
     echo --- $i
     ./sol < $i > o && (diff -y o ${i::-3}.[ao]?? > t || cat t) || cat o
 done
+
