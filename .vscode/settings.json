@@ -72,7 +72,21 @@
     "valarray": "cpp",
     "future": "cpp",
     "mutex": "cpp",
-    "thread": "cpp"
+    "thread": "cpp",
+    "atomic": "cpp",
+    "cfenv": "cpp",
+    "charconv": "cpp",
+    "cinttypes": "cpp",
+    "codecvt": "cpp",
+    "condition_variable": "cpp",
+    "csetjmp": "cpp",
+    "csignal": "cpp",
+    "cuchar": "cpp",
+    "optional": "cpp",
+    "scoped_allocator": "cpp",
+    "shared_mutex": "cpp",
+    "string_view": "cpp",
+    "typeindex": "cpp"
   },
   "C_Cpp.dimInactiveRegions": false,
   "C_Cpp.errorSquiggles": "Disabled"

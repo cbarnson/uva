@@ -33,17 +33,13 @@ typedef vector<int> vi;
 typedef pair<int, int> ii;
 typedef long long ll;
 
-// non-DP method
 ll C(int n, int k) {
-  if (k == 0 || k == n) {
-    return 1;
-  }
-
-  k = min(k, n - k);
+  if (k == 0 || k == n) return 1;
   ll ans = 1;
   k = min(k, n - k);
   for (ll i = 1; i <= k; i++) {
-    ans = ans * (n - k + i) / i;
+    // ans = ans * (n - k + i) / i;
+    ans *= (n - k + i) / i;
   }
 
   return ans;
