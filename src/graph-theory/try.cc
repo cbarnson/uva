@@ -81,7 +81,7 @@ int main(int argc, char **argv) {
       continue;
     }
 
-    if (s == "" || s.find("#") == 0) {
+    if (s == "" || s.front() == '#' || s.front() == '*') {
       cout << s << endl;
       fout << s << endl;
       continue;
