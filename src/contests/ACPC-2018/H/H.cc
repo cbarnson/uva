@@ -47,18 +47,10 @@ pair<T, vi> hungarian(const vector<vector<T>> &A) {
   return {-v[0], ans};
 }
 
-void modifyGraph(vector<vi> &G, int lo) {
-  int n = G.size(), m = G[0].size();
-  FR (i, n)
-    FR (j, m)
-      if (G[i][j] < lo) G[i][j]++;
-  // G[i][j]++;
-}
-
 int sumDiffs(const vector<vi> &G, vi &ass, const int mx) {
   int s = 0;
   int n = ass.size();
-  FR (i, n) {
+  FR(i, n) {
     int j = ass[i];
     s += mx - G[i][j];
   }
@@ -73,47 +65,30 @@ int main() {
   cin >> N >> M;
 
   vector<vi> G(N, vi(M, 0));
-  FR (i, N)
-    FR (j, M)
-      cin >> G[i][j];
+  FR(i, N)
+  FR(j, M)
+  cin >> G[i][j];
 
-  auto H = G;
+  const int INF = ~(1 << 31);
   int mi = -1;
   for (int k = 1; k <= 200; k++) {
-    // compute matching on 'H', our working copy of G
-    auto ans = hungarian<int>(H);
-    int weight;
-    vi assignment;
-    tie(weight, assignment) = ans;
-    // int weight = ans.first;
+    // build H, for each edge i -> j, if weight < k, set to INF, else keep
+    auto H = G;
+    FR(i, N) FR(j, M) if (H[i][j] < k) H[i][j] = INF;
 
-    cout << "weight: " << weight << endl;
+    int w;
+    vi ass;
+    tie(w, ass) = hungarian<int>(H);
 
-    // vi assignment = ans.second;
-
-    int n = assignment.size();
     int mx = -1;
-    FR (i, n) {
-      int j = assignment[i];
-      cout << i << " --> " << j << ", w = " << G[i][j] << endl;
-      // cout << "====== in H, w = " << H[i][j] << endl;
-      // cout << i << " assigned to " << assignment[i] << endl;
-      // H[i][j] = max(H[i][j], k);
-      mx = max(mx, G[i][j]);
+    FR(i, (int)ass.size()) {
+      int j = ass[i];
+      mx = max(mx, H[i][j]);
     }
-
-    // H[i][j] = max(H[i][j], k);
-    // preprocess
-    // modifyGraph(H, mx);
-
-    cout << "longest time spend by any : " << mx << endl;
-    int s = sumDiffs(G, assignment, mx);
-    cout << "T : " << s << endl;
-
-    // modifyGraph(H, mx);
-
+    // if any chosen assignment includes the edge of weight INF, skip this
+    if (mx == INF) continue;
+    auto s = sumDiffs(H, ass, mx);
     mi = mi == -1 ? s : min(mi, s);
   }
   cout << mi << endl;
-  // cout << "final answer: " << mi << endl;
 }

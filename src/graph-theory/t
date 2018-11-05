@@ -1,0 +1,28 @@
+[0;33m--- output.md	2018-11-04 22:11:48.909798300 -0700
+[0;33m+++ input.md	2018-11-04 21:59:02.582222700 -0700
+@@ -2,24 +2,16 @@
+ # Definitions
+ 
+ ## Closed (walk)
+-walk is
++SOLN A walk is closed if it begins and ends with the same vertex
+ ## Trail
+-
+ ## Tour
+-
+ ## Euler tour
+-
+ ## Euler trail
+-
+ ## Hamilton cycle
+-
+ ## Hamilton path
+ 
+-
+ # Graph Questions
+ 
+ ## How do you tell if simple, connected graph G has an Euler tour?
+-
+ ## How do you tell if simple, connected graph G has an Euler trail?
+ 
+-
