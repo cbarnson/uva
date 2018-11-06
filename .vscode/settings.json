@@ -90,5 +90,6 @@
   },
   "C_Cpp.dimInactiveRegions": false,
   "C_Cpp.errorSquiggles": "Disabled",
-  "python.linting.pylintEnabled": false
+  "python.linting.pylintEnabled": false,
+  "python.pythonPath": "C:\\msys64\\mingw64\\bin\\python3.7.exe"
 }

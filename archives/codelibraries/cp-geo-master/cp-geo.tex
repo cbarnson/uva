@@ -1,0 +1,40 @@
+\documentclass[a4paper,11pt]{report}
+
+\usepackage[utf8]{inputenc}
+\input{preamble}
+\title{Handbook of geometry for competitive programmers}
+\author{Victor Lecomte}
+\date{Draft \today}
+
+\begin{document}
+\maketitle
+\topskip0pt
+\vspace*{\fill}
+\noindent This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit
+\begin{center}
+\url{http://creativecommons.org/licenses/by-sa/4.0/}
+\end{center}
+or send a letter to \emph{Creative Commons, PO Box 1866, Mountain View, CA 94042, USA}.
+
+~
+
+The source code for this book is available at \url{https://github.com/vlecomte/cp-geo/}, and a PDF version can be downloaded as \url{http://vlecomte.github.io/cp-geo.pdf}.
+\vspace*{\fill}
+
+\newpage
+
+\tableofcontents
+
+\Opensolutionfile{solutions}
+\input{precision/ch-precision.tex}
+\input{basics/ch-basics.tex}
+\input{3d/ch-3d.tex}
+\Closesolutionfile{solutions}
+\appendix
+\chapter{Solutions to the exercises}
+\input{solutions.tex}
+\input{proofs.tex}
+
+\printbibliography
+
+\end{document}
