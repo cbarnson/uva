@@ -89,5 +89,6 @@
     "typeindex": "cpp"
   },
   "C_Cpp.dimInactiveRegions": false,
-  "C_Cpp.errorSquiggles": "Disabled"
+  "C_Cpp.errorSquiggles": "Disabled",
+  "python.linting.pylintEnabled": false
 }

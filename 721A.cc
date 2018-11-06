@@ -18,6 +18,17 @@ int main() {
   string s;
   cin >> s;
 
+  stringstream ss(s);
+  string x;
+  while (getline(ss, x, 'W')) {
+    cnt += (int)x.size();
+    getline(ss, x, 'B');
+  }
+
+  do {
+    int i = s.find("W")
+  }
+
   int i = s.find("B");
   while (
 }
