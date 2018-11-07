@@ -1,0 +1,116 @@
+\documentclass{article}
+% \usepackage[utf8]{inputenc}
+
+% usage: from Options > configure TexStudio > Build > add user command
+% makeindex -s nomencl.ist -t %.nlg -o %.nls %.nlo
+% Now run pdflatex -> Make Nomenclature -> pdflatex
+\usepackage{nomencl}
+\makenomenclature
+
+\usepackage{tikz}
+\usetikzlibrary{automata,positioning, shapes.geometric}
+\usepackage{subfig}
+\usepackage{pgf}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage[nottoc]{tocbibind}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\graphicspath{./images/}
+
+
+
+% set builder notation utility function, usage: \Set{ x\in A \given x^2 \geq 3 }
+\usepackage{mathtools}
+\newcommand\SetSymbol[1][]{\nonscript\:#1\vert\allowbreak\nonscript\:\mathopen{}}
+\providecommand\given{} % to make it exist
+\DeclarePairedDelimiterX\Set[1]\{\}{\renewcommand\given{\SetSymbol[\delimsize]}#1}
+
+% some stuff for C++
+\lstset { %
+	language=C++,
+	backgroundcolor=\color{black!5}, % set backgroundcolor
+	basicstyle=\footnotesize,% basic font setting
+	breaklines=true,
+	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+	frame=single,
+	columns=fullflexible
+}
+
+% TABLE OF CONTENTS, MANUALLY SET NESTING DEPTH
+%\setcounter{tocdepth}{1} % show sections
+%\setcounter{tocdepth}{2} % show subsections
+%\setcounter{tocdepth}{3} % show subsubsections
+%\setcounter{tocdepth}{4} % show paragraphs
+%\setcounter{tocdepth}{5} % show subparagraphs
+
+% VARIABLES
+% --- Hide title page
+%\newif\ifhidetitle
+%\hidetitletrue
+
+% --- make subsections have lettering (e.g. 1.a, 1.b)
+% \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+% --- make subsections have arabic numbering (e.g. 1.1, 1.2, ...)
+\renewcommand{\thesubsection}{\arabic{subsection}}
+
+% --- End of proof black square (remove if you want default hollow white square)
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\titlespacing*{\section}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+
+\begin{document}
+	
+% --- title, author, date all on title page, use \\ within a {} to linebreak
+\title{CPSC 3630\\Assignment 3}
+\author{Cody Barnson\\ ID: 001172313}
+\date{Nov 10 2018}
+
+% TITLE PAGE, example of variable usage
+%\ifhidetitle
+%\else
+
+% --- no page numbers for title page and table of contents
+\pagenumbering{gobble}
+\maketitle
+\newpage
+
+% --- uncomment to show the table of contents
+%\tableofcontents
+%\listoftables
+%\listoffigures
+\newpage
+
+% --- this 'fi' belongs to the \ifhidetitle \else block above
+%\fi
+
+% --- normal page numbers starting from here, can also do roman
+\renewcommand{\thesubsubsection}{\thesubsection.\alph{subsubsection}}
+\pagenumbering{arabic}
+		
+		
+% ====== START HERE
+		
+\section*{}
+
+\subsection{Q1}
+
+We wish to prove that for any language $L_2$, if $L_1$ is regular, then the quotient $L_1/L_2$ is also regular.  We proceed using the construction from Theorem 1.47: \\
+
+Since $L_1$ is regular, there exists NFA $N_1 = (Q, \Sigma, \delta, q_1, F_1)$ that recognizes $L_1$, and NFA $N_2 = (Q, \Sigma, \delta, q_2, F_2)$ that recognizes $L_2$ (i.e. $L_2(N_2) = L_2$).  We construct $N' = (Q, \Sigma, \delta, q_1, F_2)$, ....
+
+TODO Q1
+
+
+
+\end{document}
