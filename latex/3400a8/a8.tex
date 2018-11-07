@@ -1,0 +1,121 @@
+\documentclass{article}
+
+  \usepackage{nomencl}
+  \makenomenclature
+  \RequirePackage{tikz}
+  \RequirePackage{ifthen}
+  \usepackage{tikz}
+  \usetikzlibrary{automata, positioning, shapes, shapes.geometric}
+  \usepackage{subfig}
+  \usepackage{pgf}
+  \usepackage{float}
+  \usepackage{titlesec}
+  \usepackage[nottoc]{tocbibind}
+  \usepackage{hyperref}
+  \usepackage{enumitem}
+  \usepackage{listings}
+  \usepackage{xcolor}
+  \usepackage{amsmath,amssymb,amsthm}
+  \usepackage{scalerel}
+  
+  % set builder notation utility function, usage: \Set{ x\in A \given x^2 \geq 3 }
+  \usepackage{mathtools}
+  \newcommand\SetSymbol[1][]{\nonscript\:#1\vert\allowbreak\nonscript\:\mathopen{}}
+  \providecommand\given{} % to make it exist
+  \DeclarePairedDelimiterX\Set[1]\{\}{\renewcommand\given{\SetSymbol[\delimsize]}#1}
+  
+  % Usage: \floor*{ ... } or \ceil*{ ... }
+  \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+  \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+  \newcommand{\cyc}[1]{\scaleleftright[1ex]{\langle}{\begin{array}{c}{#1}\end{array}}{\rangle}}
+  % --- make subsections have lettering (e.g. 1.a, 1.b)
+  % \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+  
+  % --- make subsections have arabic numbering (e.g. 1.1, 1.2, ...)
+  \renewcommand{\thesubsection}{\arabic{subsection}}
+  
+  % --- End of proof black square (remove if you want default hollow white square)
+  \renewcommand{\qedsymbol}{$\blacksquare$}
+  
+  % My macros
+  \newcommand{\Z}{\mathbb{Z}}
+
+  \titlespacing*{\section}
+  {0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+  \titlespacing*{\subsection}
+  {0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+  
+  
+  \begin{document}
+    
+  % --- title, author, date all on title page, use \\ within a {} to linebreak
+  \title{MATH 3400 - Group and Ring Theory\\Assignment 8}
+  \author{Cody Barnson\\ ID: 001172313}
+  \date{9 Nov 2018}
+  % --- no page numbers for title page and table of contents
+  \pagenumbering{gobble}
+  \maketitle
+  \newpage
+  % --- normal page numbers starting from here, can also do roman
+  \pagenumbering{arabic}
+  
+  
+  % -------------------------------------------------------------------
+  % BEGIN
+  % -------------------------------------------------------------------
+  
+\section*{}
+% 1
+\subsection{Let $G = \mathbb{Z}_4 \times \mathbb{Z}_4$, and $H = \Set{(0,0),(2,0),(0,2),(2,2)}$.  Is $G/H$ isomorphic to $\mathbb{Z}_4$ or to $\mathbb{Z}_2 \times \mathbb{Z}_2$?}
+
+We know that $|G/H| = |G|/|H| = \frac{4 * 4}{4} = 4$.  $G/H$ has 4 elements consisting of $H$, as follows,
+
+\begin{align*}
+    (0, 0) + H = H &= \Set{(0, 0), (2, 0), (0, 2), (2, 2)} \\
+    (0, 1) + H &= \Set{(0, 1), (2,1), (0,3), (2,3)} \\
+    (1, 0) + H &= \Set{(1,0),(3,0),(1,2),(3,2)} \\
+    (1, 1) + H &= \Set{(1,1),(3,1),(1,3),(3,3)} \\
+\end{align*}
+
+Each of these have order 2, so $G/H$ is isomorphic to $\mathbb{Z}_2 \times \mathbb{Z}_2$.
+
+\subsection{Let $H$ be a normal subgroup of $G$ and let $a$ belong to $G$.  If the element $aH$ has order 4 in the group $G/H$ and $|H| = 12$, what are the possibilities for the order of $a$ in $G$?}
+
+Let $|aH| = n$ and $|a| = m$.  Then, we have $(aH)^m = a^mH = eH = H$, and so $n$ divides $m$.  Also, there exists some integer $t$, such that $m = |a| = nt = |aH|t$, and so $|a^t| = \frac{m}{gcd(m, t)} = \frac{m}{t} = n$.  Since we are given that $n = 4$, then $m = nt = 4t = |a|$. So we know that the possibilities for $|a|$ are orders that are multiples of 4 and divisors of $|H| = 12$.  That is, $|a| = 4$.  
+
+\subsection{Prove that there is no homomorphism from $\mathbb{Z}_8 \times \mathbb{Z}_2$ onto $\mathbb{Z}_4 \times \mathbb{Z}_4$.}
+
+Let $G = \mathbb{Z}_8 \times \mathbb{Z}_2$, and $H = \mathbb{Z}_4 \times \mathbb{Z}_4$.  We know that $\mathbb{Z}_8$ is a cyclic group of order 8, and that 1 generates the group.  Also, $\mathbb{Z}_2$ is a cyclic group of order 2, and that 1 generates the group. So we have an element $(1,1) \in G$ with order $|(1,1)| = lcm(8, 2) = 8$.  For $H$, note that there is no element in $H$ that has order more than 4.  But we have just shown that there is an element in $G$ with order 8.  Then the mapping cannot be onto, thus $G$ is not be isomorphic to $H$, and there is no homomorphism from $G$ onto $H$.  
+
+\newcommand{\zzz}{\mathbb{Z}_{30}}
+\newcommand{\ztt}{\mathbb{Z}_{12}}
+\subsection{How many homomorphisms are there from $\zzz$ onto $\ztt$? How many are there to $\ztt$?}
+
+
+\subsubsection{How many homomorphisms are there from $\zzz$ onto $\ztt$?}
+
+There are none, because 12 does not divide 30.  (Long answer) Suppose (towards a contradiction) there exists homomorphism $\phi$ from $\zzz$ onto $\ztt$, then since $\phi$ is onto, there must exist some element $g \in \zzz$ such that $\phi(g) = 1 \in \ztt$ and $|\phi(g)| = |1|$ divides $|g|$.  $\ztt$ is cyclic, and 1 is a generator.  For $\ztt = \cyc{1}$, we get $|1| = 12$.  This implies that 12 divides $|g|$, but that also means that $|g|$ divides $|\zzz| = 30$ (that is, 12 divides 30; which is false), which is a contradiction.  Therefore, $\phi$ must not be onto, and there are no homomorphisms from $\zzz$ onto $\ztt$.
+
+\subsubsection{How many are there to $\ztt$?}
+
+Let $\phi : \zzz \longrightarrow \ztt$ be a homomorphism; it is completely defined by $\phi(1)$ since $\zzz$ is cyclic.  Then $|\phi(1)|$ divides both 30 and 12.  Now, we need to find all possible orders for $\phi(1)$ in $\zzz$.  $|1| = 30$ in $\zzz$, so $|\phi(1)|$ divides 30. Since elements of $\ztt$ have order 1, 2, 3, 4, 6, or 12, $|\phi(1)|$ must be in $\Set{1,2,3,6}$.  \\
+
+Now, we find all elements in $\ztt$ with orders in $\Set{1,2,3,6}$.  They are:
+
+\begin{align*}
+  |0| &= 1 \\
+  |2| &= 6 \\
+  |4| &= 3 \\
+  |6| &= 2 \\
+  |8| &= 3 \\
+  |10| &= 6 \\
+\end{align*}
+
+
+So, the possibles images for 1 in $\zzz$ are in $\Set{0,2,4,6,8,10}$; there are 6 of them, (that is, 6 choices for $\phi(1)$; what we map 1 to).  Therefore, there are 6 homomorphisms from $\zzz$ to $\ztt$.
+
+
+
+\end{document}
+
+  
