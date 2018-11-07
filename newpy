@@ -1,5 +1,6 @@
 #!/bin/sh
 
+SHEBANG=#!/usr/bin/python3
 PY_EXT=.py
 TEMPLATE=$HOME/uva/src/templates/template${PY_EXT}
 
@@ -14,6 +15,8 @@ if [ -f ${TEMPLATE} ]; then
     echo $1${PY_EXT}
     timestamp | cat - ${TEMPLATE} > tmp && mv tmp $1${PY_EXT}
     echo "# Problem #    : "$1 | cat - $1${PY_EXT} > tmp && mv tmp $1${PY_EXT}
+    echo '' | cat - $1${PY_EXT} > tmp && mv tmp $1${PY_EXT}
+    echo ${SHEBANG} | cat - $1${PY_EXT} > tmp && mv tmp $1${PY_EXT}
     sed -i 's/\r//' $1${PY_EXT}
   fi
 fi

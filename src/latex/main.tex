@@ -1,0 +1,158 @@
+\documentclass{article}
+
+  \usepackage{nomencl}
+  \makenomenclature
+  \RequirePackage{tikz}
+  \RequirePackage{ifthen}
+  \usepackage{tikz}
+  \usetikzlibrary{automata, positioning, shapes, shapes.geometric}
+  \usepackage{subfig}
+  \usepackage{pgf}
+  \usepackage{float}
+  \usepackage{titlesec}
+  \usepackage[nottoc]{tocbibind}
+  \usepackage{hyperref}
+  \usepackage{enumitem}
+  \usepackage{listings}
+  \usepackage{xcolor}
+  \usepackage{amsmath,amssymb,amsthm}
+  \usepackage{scalerel}
+  
+  % set builder notation utility function, usage: \Set{ x\in A \given x^2 \geq 3 }
+  \usepackage{mathtools}
+  \newcommand\SetSymbol[1][]{\nonscript\:#1\vert\allowbreak\nonscript\:\mathopen{}}
+  \providecommand\given{} % to make it exist
+  \DeclarePairedDelimiterX\Set[1]\{\}{\renewcommand\given{\SetSymbol[\delimsize]}#1}
+  
+  % Usage: \floor*{ ... } or \ceil*{ ... }
+  \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+  \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+  
+  % --- make subsections have lettering (e.g. 1.a, 1.b)
+  % \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+  
+  % --- make subsections have arabic numbering (e.g. 1.1, 1.2, ...)
+  \renewcommand{\thesubsection}{\arabic{subsection}}
+  
+  % --- End of proof black square (remove if you want default hollow white square)
+  \renewcommand{\qedsymbol}{$\blacksquare$}
+  
+  % My macros
+  \newcommand{\Z}{\mathbb{Z}}
+
+  \titlespacing*{\section}
+  {0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+  \titlespacing*{\subsection}
+  {0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+  
+  
+  \begin{document}
+    
+  % --- title, author, date all on title page, use \\ within a {} to linebreak
+  \title{MATH 3400 - Group and Ring Theory\\Assignment 7}
+  \author{Cody Barnson\\ ID: 001172313}
+  \date{2 Nov 2018}
+  % --- no page numbers for title page and table of contents
+  \pagenumbering{gobble}
+  \maketitle
+  \newpage
+  % --- normal page numbers starting from here, can also do roman
+  \pagenumbering{arabic}
+  
+  
+  % -------------------------------------------------------------------
+  % BEGIN
+  % -------------------------------------------------------------------
+  
+  \section*{}
+  
+  \subsection{Suppose that $G_1 \cong G_2$ and $H_1 \cong H_2$. Prove that $G_1 \times H_1 \cong G_2 \times H_2$.}
+
+  Let $\alpha : G_1 \longrightarrow G_2$ and $\beta : H_1 \longrightarrow H_2$ be isomorphisms (as given).  We wish to show that $G_1 \times H_1 \cong G_2 \times H_2$.  We proceed with the 4 step isomorphism test:
+
+  \paragraph{Step 1}
+  
+  \begin{align*}
+    \alpha \times \beta : G_1 \times H_1 &\longrightarrow G_2 \times H_2 \\
+    (g, h) &\longrightarrow (\alpha(g), \beta(h)) \\
+  \end{align*}
+
+  \newcommand{\ab}{\alpha \times \beta }
+  \newcommand{\al}{\alpha}
+  \newcommand{\bb}{\beta}
+
+  \paragraph{Step 2}
+
+  We need to prove $\ab$ is one-to-one. Suppose $\ab(a,b) = \ab(g,h)$.  Then, $(\alpha(a), \beta(b)) = (\alpha(g), \beta(h))$ and $\al(g) = \al(h)$, and also $\bb(b) = \bb(h)$.  Since $\al$ and $\bb$ are isomorphisms, and thus are both one-to-one, we have $a = g$ and $b = h$.  Then, $(a,b) = (g,h)$, so $\ab$ is one-to-one.
+
+  \paragraph{Step 3}
+
+  We need to prove $\ab$ is onto.  Let $(g,h) \in G_2 \times H_2$ be arbitrary.  This means, $g \in G_2, h \in H_2$.  Then, $\exists a \in G_1$ and $\exists b \in H_1$ such that $\al(a) = g$ and $\bb(b) = h$ (since $\al$ and $\bb$ are isomorphisms, and thus are both onto).  Then, $(a,b) \in G_1 \times H_1$ and $\ab(a,b) = (\al(a),\bb(b)) = (g,h)$, thus $\ab$ is onto.
+
+  \paragraph{Step 4}
+
+  We need to show that $\ab$ is operation preserving.  Let $(a,b), (g,h) \in G_1 \times H_1$ be arbitrary, then since both $\al$ and $\bb$ are operation preserving, we have,
+
+  \begin{align*}
+    \ab((a,b)(g,h)) &= \ab(ag,bh) \\
+    &= (\al(ag),\bb(bh)) \\
+    &= (\al(a)\al(b), \bb(b)\bb(h)) \\
+    &= ((\al(a),\bb(b)), (\al(g),\bb(h))) \\
+    &= (\ab(a,b), \ab(g,h)) \\
+  \end{align*}
+
+  So $\ab$ is operation preserving as well.  Thus be our 4-step isomorphism test, we can conclude that if $G_1 \cong G_2$ and $H_1 \cong H_2$, then $G_1 \times H_1 \cong G_2 \times H_2$, as desired.
+
+  % question 2
+  \subsection{How many elements of order 25 does $\Z_5 \times \Z_{25}$ have? }
+    
+  We have $\Z_5 \times Z_{25}$.  Using the fact: $\varphi(p^n) = p^n - p^{n-1}$ for any odd prime $p$, we know there are $\varphi(25) + \varphi(5) = (25 - 5) + (5 - 1) = 24$ elements of order 5, and we know there are $5 * 25 = 125$ elements in total (one of which is the identity) in $\Z_5 \times \Z_{25}$, then the number of elements of order 25 must be $\varphi(25) + \varphi(5) * \varphi(25) = 20 + 4 * 20 = 100$.
+
+  % question 3
+  \subsection{How many cyclic subgroups of order 4 does $\Z_4 \times \Z_2$ have?}
+
+  \newcommand{\zf}{\Z_4 \times \Z_2}
+
+  First, note that (1) $\zf$ has order 8, (2) every subgroup of order 2 must be cyclic, (3) the only subgroup order 1 is that containing the identity element, (4) the only subgroup order 8 is the whole group, and (5) the only other subgroups have order 4, since 4 divides the order of the group.  We are interested in knowing the number of cyclic subgroups of order 4.  Since each subgroup of order 4 has 2 elements of order 4, and two cyclic subgroups of order 4 have an element of order 4 in common, we know there are $\frac{4}{2} = 2$ cyclic subgroups order 4.  \\
+
+  In particular, for $\zf$, there are 3 subgroups of order 4, but only two are cyclic.  Take the subgroup: $\Set{(2,0),(0,1),(2,1),(0,0)}$, which is not cyclic, which supports our claim above there are 2 cyclic subgroups of order 4 in $\zf$.
+
+
+
+
+  % question 4
+  \subsection{Let $N$ be a normal subgroup of a group $G$.  If $N$ is cyclic, prove that every subgroup is also normal in $G$.}
+
+  \newcommand{\cyc}[1]{\scaleleftright[1ex]{\langle}{\begin{array}{c}{#1}\end{array}}{\rangle}}
+
+
+    % \newcommand{\anglebrackets}[1]{%
+    % \left\langle #1 \right\rangle}
+
+    % \alias\cyc\anglebrackets
+
+  % \newcommand{\cyc}[1]{\scaleleftright[1ex]{<}{\begin{array}{c}{#1}\\ \end{array}}{>}}
+
+  % \newcommand{\cycc}[1]{\scaleleftright[1ex]{\langle}{\,#1\,}{\rangle}}
+
+    We have $N = \cyc{n}, n \in G$, $N \trianglelefteq G$.  Let $H \leq N$ be an arbitrary subgroup.  We wish to show that if $N$ is cyclic, then $H \trianglelefteq G$ also.  We start with $N \trianglelefteq G \Longrightarrow \forall g \in gng^{-1} = n^m$ for some integer $m$.  That is, all elements of $n \in N$ have the form $n^m$.  We have some arbitrary $H \leq N = \cyc{n}$, so $H = \cyc{n^k}$ for some integer $k$.  That is, all elements of $H \leq N$ have the form $n^k$ for some integer $k$.  It is easy to see that when $|n| = 1$, $H = N = \Set{1}$, and $H \trianglelefteq G$.  \\
+
+    Note when $|n| = \infty$, we have the desired $H \trianglelefteq G$, so we will omit this and prove for finite $|n|$.  For $1 < |n| < \infty$, since $N \trianglelefteq G$, $\forall g \in G$, we have $gNg^{-1} = N = \cyc{gng^{-1}}$, such that $\forall g \in G, \cyc{gng^{-1}} = \cyc{n}$.  So $gng^{-1}$ is a generator of $\cyc{n}, \forall g \in G$. \\
+
+    Now, $\forall g \in G, \cyc{gng^{-1}} = \cyc{n} \Longrightarrow gng^{-1} = n^j$ for some integer $j$ such that $gcd(|n|, j) = 1$.  Then, $gng^{-1} = n^j \Longrightarrow gn^kg^{-1} = n^{jk}$, and also $g\cyc{n^k}g^{-1} = \cyc{n^{jk}}$.  \\
+
+    We have $\cyc{n^k} = \cyc{n^{jk}}, \cyc{n^k} \supseteq \cyc{n^{jk}}$, we wish to show $\cyc{n^k} \subseteq \cyc{n^{jk}}$ is also true.  We have $gcd(|n|, j) = 1$, so $\exists s,t \in \mathbb{Z}$ such that $1 = s|n| + tj$.  Equivalently, $k = ks|n| + ktj$.  
+
+    \begin{align*}
+      n^k &= n^{ks|n|}n^{ktj} \\
+      &= (n^{|n|})^{ks}n^{ktj} \\
+      &= n^{ktj} \;\;\;\text{(by $n^{|n|} = 1$)}\\
+      &= (n^k)^{tj} \\
+    \end{align*}
+
+    So we have $n^k = (n^k)^{tj} \Longrightarrow \cyc{n^k} \subseteq \cyc{n^{jk}}$, as desired.  So $\cyc{n^k} = \cyc{n^{jk}}$. \\
+
+    Thus, $\forall g \in G, g\cyc{n^k}g^{-1} = \cyc{n^k}$ and $gNg^{-1} = H$ so $H \trianglelefteq G$.
+
+  \end{document}
+  
