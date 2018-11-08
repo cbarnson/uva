@@ -32,6 +32,6 @@ g++ $myfile -g -O2 -std=c++17 -Wall -Wextra -Wconversion -Wshadow -Wfatal-errors
 for i in *.in; do
     echo --- $i
     # ./sol < $i > o && (diff -u o ${i::-3}.[ao]?? > t || cat t) || cat o
-    ./sol < $i > o && (diff -u o ${i::-3}.[ao]??) | colordiff
+    ./sol < $i > o && (diff -y o ${i::-3}.[ao]?? > t || cat t) || cat o
 done
 
