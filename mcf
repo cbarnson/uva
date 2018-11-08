@@ -1,96 +1,53 @@
-#!/bin/sh
+#!/bin/bash -x
 
-# variables
-FILES=(in out)
-DIRECTORY=src/codeforces/accepted
-CPP_EXT=.cc
-TEMPLATE=src/templates/template${CPP_EXT}
+found=`ls -t1 *.cc | head -n 1`
 
-# Usage preamble:
-echo "Usage:" $0 " <completed prob file in $(pwd) to move to ${DIRECTORY}>"
-echo "No args: refresh I/O files"
-echo "1 arg  : see above, and moves file indicated by filename in arg 1 to ${DIRECTORY}"
-echo "e.g."
-echo "$0 123"
-echo ""
-
-timestamp() {
-  echo "// Created on   : "$(date +"%Y-%m-%d %H:%M:%S")
-}
-
-# create blank I/O files
-for f in ${FILES[@]}
-do
-  if [ -f ${f} ]; then
-    rm ${f}
-    touch ${f}
-  fi
-done
-
-# use 1st arg as file name (e.g. 123 for 123.cc) to move to accepted
-# DIRECTORY=src/accepted
-if [ "$#" -eq 1 ]; then
-  if [ -f $1${CPP_EXT} ]; then
-    echo moving $1${CPP_EXT} to accepted
-
-    # be more careful moving this
-    if [ -d "$DIRECTORY" ]; then
-      echo "directory exists"
-      
-      cp $1${CPP_EXT} "$DIRECTORY"/$1${CPP_EXT}
-      if [ -f "$DIRECTORY"/$1${CPP_EXT} ]; then
-        rm $1${CPP_EXT}
-      else
-        echo warning, $1${CPP_EXT} did not copy to "$DIRECTORY" correctly.. skipping removal step
-      fi
-    fi
-
-    # if there was an .exe left behind, remove it
-    if [ -f $1 ]; then
-      echo removing unneeded exe $1
-      rm $1
-    fi
-
-    # if .exe (windows), remove it
-    if [ -f $1".exe" ]; then
-	echo removing unneeded exe windows $1".exe"
-	rm $1".exe"
-    fi
-
-    if [ -f $1${CPP_EXT}~ ]; then
-	rm $1${CPP_EXT}~
-    fi
-
-    # files created as side effect of `run` script
-    toremove=(o t sol)
-    for j in ${toremove[@]}
-    do
-	if [ -f ${j} ]; then
-	    echo removing ${j}...
-	    rm ${j}
-	fi
-    done
-
-
-    # if [ -f "o" ]; then
-    # 	rm "o"
-    # fi
-
-    # if [ -f "t" ]; then
-    # 	rm "t"
-    # fi
-
-    # if [ -f "sol" ]; then
-    # 	rm "sol"
-    # fi
-
-
-    find -type f -regex './in[0-9]*~?' -delete
-    find -maxdepth 1 -type f -name '*.in' -delete
-    find -maxdepth 1 -type f -name '*.out' -delete
-    find -maxdepth 1 -type f -name '*.ans' -delete
-
-  fi
+if [ -f $found ]; then
+    echo 'target: $found'
+else
+    echo 'bad target, must exit...'
+    exit
 fi
 
-echo "Success!"
+fileNoExt=${found::-3}
+fileWithExt=$fileNoExt'.cc'
+moveTarget="${HOME}/uva/src/codeforces/accepted"
+
+tmp='tmp'
+for i in {1..10}; do x=$RANDOM; tmp="${tmp}$(((x%10)+1))"; done
+
+if [ -f $fileWithExt ]; then
+    cp -n $fileWithExt $tmp
+    if [ -d $moveTarget ]; then
+	echo 'moving $fileWithExt to $moveTarget'
+	mv $fileWithExt $moveTarget/$fileWithExt
+	if [ -f $moveTarget/$fileWithExt ]; then
+	    echo 'file has been moved successfully'
+	    echo 'deleting temporary file: $tmp'
+	    rm $tmp
+	else
+	    echo 'error has occurred, file not moved to $moveTarget successfully'
+	    echo 'backup exists as ${tmp}, please investigate and try again'
+	    exit
+	fi
+    fi
+fi
+
+echo '-------'
+echo 'performing cleanup'
+
+toremove=(o t sol)
+for j in ${toremove[@]}
+do
+    if [ -f ${j} ]; then
+	echo removing ${j}...
+	rm ${j}
+    fi
+done
+
+find -maxdepth 1 -type f -name '*~' -delete
+find -maxdepth 1 -type f -name '*.in' -delete
+find -maxdepth 1 -type f -name '*.out' -delete
+find -maxdepth 1 -type f -name '*.ans' -delete
+echo 'done cleanup...'
+echo 'Success!'
