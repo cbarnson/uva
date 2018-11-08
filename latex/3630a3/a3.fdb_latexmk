@@ -1,9 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1541708710 "c:/msys64/home/cbarn/uva/latex/3630a3/a3.tex" "a3.pdf" "a3" 1541708712
-  "a3.aux" 1541708711 4863 0397b98f699e2f9fb6dad67fd8eb667f ""
-  "a3.out" 1541708711 1669 4ea9978e3da4e10527f21552fe4bf765 ""
-  "a3.tex" 1541708709 13679 42425e16f9a36c4a6a468e62cf529299 ""
-  "c:/msys64/home/cbarn/uva/latex/3630a3/a3.tex" 1541708709 13679 42425e16f9a36c4a6a468e62cf529299 ""
+["pdflatex"] 1541708773 "c:/msys64/home/cbarn/uva/latex/3630a3/a3.tex" "a3.pdf" "a3" 1541708775
+  "a3.aux" 1541708775 4863 0397b98f699e2f9fb6dad67fd8eb667f ""
+  "a3.out" 1541708775 1669 4ea9978e3da4e10527f21552fe4bf765 ""
+  "a3.tex" 1541708772 14603 a48f56a639182e1539b5dc6cdf4f4eea ""
+  "c:/msys64/home/cbarn/uva/latex/3630a3/a3.tex" 1541708772 14603 a48f56a639182e1539b5dc6cdf4f4eea ""
   "c:/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1538934770 3332 103109f5612ad95229751940c61aada0 ""
   "c:/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1538933580 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1538933580 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -170,8 +170,8 @@
   "c:/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1538938199 4218670 4aca86eac1c82b0b442e5a5930ff9097 ""
   "c:/texlive/2018/texmf.cnf" 1538938074 673 4ae7b2f49cee444c5343a45b5d0f169c ""
   (generated)
-  "a3.aux"
-  "a3.log"
   "a3.pdf"
+  "a3.aux"
   "a3.nlo"
   "a3.out"
+  "a3.log"

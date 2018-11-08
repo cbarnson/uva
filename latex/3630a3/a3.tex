@@ -169,9 +169,9 @@ Thus, $B_n$ is regular.
 For this language, we have CFG:
 
 \begin{align*}
-	S &\longrightarrow S_0 \;|\; S_1 \\
-	S_0 &\longrightarrow 0S_1 \;|\; 1S_1 \\
-	S_1 &\longrightarrow 00S_1 \;|\; 01S_1 \;|\; 10S_1 \;|\; 11S_1 \;|\; \epsilon \\
+	S   & \longrightarrow S_0 \;|\; S_1                                            \\
+	S_0 & \longrightarrow 0S_1 \;|\; 1S_1                                          \\
+	S_1 & \longrightarrow 00S_1 \;|\; 01S_1 \;|\; 10S_1 \;|\; 11S_1 \;|\; \epsilon \\
 \end{align*}
 
 \subsubsection{$\Set{w \given \text{$w$ contains more 1's than 0's}}$}
@@ -179,8 +179,8 @@ For this language, we have CFG:
 For this language, we have CFG:
 
 \begin{align*}
-	S &\longrightarrow TS \;|\; 1S \;|\; 1T \\
-	T &\longrightarrow TT \;|\; 0T1 \;|\; 1T0 \;|\; \epsilon \\
+	S & \longrightarrow TS \;|\; 1S \;|\; 1T                  \\
+	T & \longrightarrow TT \;|\; 0T1 \;|\; 1T0 \;|\; \epsilon \\
 \end{align*}
 
 \subsubsection{The empty set.}
@@ -188,7 +188,7 @@ For this language, we have CFG:
 For this language, we have CFG:
 
 \begin{align*}
-	S &\longrightarrow S \\
+	S & \longrightarrow S \\
 \end{align*}
 
 Notice that $S$ never resolves, so we get the $\emptyset$.
@@ -199,16 +199,16 @@ Notice that $S$ never resolves, so we get the $\emptyset$.
 We begin with the following CFG:
 
 \begin{align*}
-	A &\longrightarrow BAB \;|\; B \;|\; \epsilon \\
-	B &\longrightarrow 00 \;|\; \epsilon \\
+	A & \longrightarrow BAB \;|\; B \;|\; \epsilon \\
+	B & \longrightarrow 00 \;|\; \epsilon          \\
 \end{align*}
 
 \paragraph{Step 1} Create new start variable $A_0$ and a corresponding new rule.
 
 \begin{align*}
-	A_0 &\longrightarrow A \\
-	A &\longrightarrow BAB \;|\; B \;|\; \epsilon \\
-	B &\longrightarrow 00 \;|\; \epsilon \\
+	A_0 & \longrightarrow A                          \\
+	A   & \longrightarrow BAB \;|\; B \;|\; \epsilon \\
+	B   & \longrightarrow 00 \;|\; \epsilon          \\
 \end{align*}
 
 \paragraph{Step 2} Remove the $\epsilon$-rules.
@@ -216,17 +216,17 @@ We begin with the following CFG:
 \subparagraph{Remove $B \longrightarrow \epsilon$}
 
 \begin{align*}
-	A_0 &\longrightarrow A \\
-	A &\longrightarrow BAB \;|\; BA \;|\; AB \;|\; A \;|\; B \;|\; \epsilon \\
-	B &\longrightarrow 00 \\
+	A_0 & \longrightarrow A                                                    \\
+	A   & \longrightarrow BAB \;|\; BA \;|\; AB \;|\; A \;|\; B \;|\; \epsilon \\
+	B   & \longrightarrow 00                                                   \\
 \end{align*}
 
 \subparagraph{Remove $A \longrightarrow \epsilon$}
 
 \begin{align*}
-	A_0 &\longrightarrow A \;|\; \epsilon \\
-	A &\longrightarrow BAB \;|\; BA \;|\; AB \;|\; A \;|\; B \;|\; BB \\
-	B &\longrightarrow 00 \\
+	A_0 & \longrightarrow A \;|\; \epsilon                               \\
+	A   & \longrightarrow BAB \;|\; BA \;|\; AB \;|\; A \;|\; B \;|\; BB \\
+	B   & \longrightarrow 00                                             \\
 \end{align*}
 
 \paragraph{Step 3} Remove unit rules.
@@ -234,48 +234,48 @@ We begin with the following CFG:
 \subparagraph{Remove $A \longrightarrow A$}
 
 \begin{align*}
-	A_0 &\longrightarrow A \;|\; \epsilon \\
-	A &\longrightarrow BAB \;|\; BA \;|\; AB \;|\; B \;|\; BB \\
-	B &\longrightarrow 00 \\
+	A_0 & \longrightarrow A \;|\; \epsilon                       \\
+	A   & \longrightarrow BAB \;|\; BA \;|\; AB \;|\; B \;|\; BB \\
+	B   & \longrightarrow 00                                     \\
 \end{align*}
 
 \subparagraph{Remove $A \longrightarrow B$}
 
 \begin{align*}
-	A_0 &\longrightarrow A \;|\; \epsilon \\
-	A &\longrightarrow BAB \;|\; BA \;|\; AB \;|\; 00 \;|\; BB \\
-	B &\longrightarrow 00 \\
+	A_0 & \longrightarrow A \;|\; \epsilon                        \\
+	A   & \longrightarrow BAB \;|\; BA \;|\; AB \;|\; 00 \;|\; BB \\
+	B   & \longrightarrow 00                                      \\
 \end{align*}
 
 \subparagraph{Remove $A_0 \longrightarrow A$}
 
 \begin{align*}
-	A_0 &\longrightarrow BAB \;|\; BA \;|\; AB \;|\; 00 \;|\; BB \;|\; \epsilon \\
-	A &\longrightarrow BAB \;|\; BA \;|\; AB \;|\; 00 \;|\; BB \\
-	B &\longrightarrow 00 \\
+	A_0 & \longrightarrow BAB \;|\; BA \;|\; AB \;|\; 00 \;|\; BB \;|\; \epsilon \\
+	A   & \longrightarrow BAB \;|\; BA \;|\; AB \;|\; 00 \;|\; BB                \\
+	B   & \longrightarrow 00                                                     \\
 \end{align*}
 
 \paragraph{Step 4} Replace terminals, 00, by new variable, say $U$ and corresponding new rule.
 
 \begin{align*}
-	A_0 &\longrightarrow BAB \;|\; BA \;|\; AB \;|\; UU \;|\; BB \;|\; \epsilon \\
-	A &\longrightarrow BAB \;|\; BA \;|\; AB \;|\; UU \;|\; BB \\
-	B &\longrightarrow UU \\
-	U &\longrightarrow 0 \\
+	A_0 & \longrightarrow BAB \;|\; BA \;|\; AB \;|\; UU \;|\; BB \;|\; \epsilon \\
+	A   & \longrightarrow BAB \;|\; BA \;|\; AB \;|\; UU \;|\; BB                \\
+	B   & \longrightarrow UU                                                     \\
+	U   & \longrightarrow 0                                                      \\
 \end{align*}
 
 \paragraph{Step 5} Shorten long rules with RHS length $\geq 3$.
 
 \begin{align*}
-	A_0 &\longrightarrow BA_1 \;|\; BA \;|\; AB \;|\; UU \;|\; BB \;|\; \epsilon \\
-	A &\longrightarrow BA_2 \;|\; BA \;|\; AB \;|\; UU \;|\; BB \\
-	B &\longrightarrow UU \\
-	U &\longrightarrow 0 \\
-	A_1 &\longrightarrow AB \\
-	A_2 &\longrightarrow AB \\
+	A_0 & \longrightarrow BA_1 \;|\; BA \;|\; AB \;|\; UU \;|\; BB \;|\; \epsilon \\
+	A   & \longrightarrow BA_2 \;|\; BA \;|\; AB \;|\; UU \;|\; BB                \\
+	B   & \longrightarrow UU                                                      \\
+	U   & \longrightarrow 0                                                       \\
+	A_1 & \longrightarrow AB                                                      \\
+	A_2 & \longrightarrow AB                                                      \\
 \end{align*}
 
-The final result from step 5 (above) shows our $R$ of our Chomsky normal form, described by $G = (V, \Sigma, R, A_0)$, where $V = \Set{A_0, A, B, U, A_1, A_2}$, $\Sigma = \Set{0}$, and start variable $A_0$. 
+The final result from step 5 (above) shows our $R$ of our Chomsky normal form, described by $G = (V, \Sigma, R, A_0)$, where $V = \Set{A_0, A, B, U, A_1, A_2}$, $\Sigma = \Set{0}$, and start variable $A_0$.
 
 
 
@@ -318,7 +318,7 @@ Since this grammar will generate zero or more strings from $L_1$, and this is ex
 		edge [loop below,align=center] node {$a,\epsilon \rightarrow a$\\$b,\epsilon \rightarrow b$} (q_1)
 
 		(q_2) edge node {$\epsilon, \$ \rightarrow \epsilon$} (q_3)
-		 edge [loop above,align=center] node {$a,a \rightarrow \epsilon$\\$b,b \rightarrow \epsilon$} (q_2)
+		edge [loop above,align=center] node {$a,a \rightarrow \epsilon$\\$b,b \rightarrow \epsilon$} (q_2)
 		;
 	\end{tikzpicture}
 	\caption{PDA that recognizes the language $\Set{ww^R \given w \in \Set{a,b}^*}$, where $w^R$ is the string $w$ written backwards.}
