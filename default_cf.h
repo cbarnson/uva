@@ -57,4 +57,5 @@ void error(istream_iterator<string> it, T a, Args... args) {
 
 // empty
 void error(istream_iterator<string> it) {
+  return;
 }

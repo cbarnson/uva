@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # clear; clear
 
@@ -20,7 +20,14 @@
 # same usage as in option 2, but matches the LAST UPDATED *.cc file and uses that (best way!!)
 myfile=`ls -t1 *.cc | head -n 1`
 echo $myfile
-g++ $myfile -g -O2 -std=c++17 -Wall -Wextra -Wconversion -Wshadow -Wfatal-errors -o sol || exit
+
+# compile with -std=c++11 ? do run 11
+compileWith="-std=c++17"
+if [ $# -gt 0 ]; then
+    compileWith="-std=c++${1}"
+fi
+
+g++ $myfile -g -O2 $compileWith -Wno-unused-parameter -Wall -Wextra -Wconversion -Wshadow -Wfatal-errors -o sol || exit
 
 # Option 4: 
 # this way changes the usage so you don't have to type the .cc after the 
