@@ -33,6 +33,10 @@ if [ -f $fileWithExt ]; then
     fi
 fi
 
+if [ -f $fileNoExt".exe" ]; then
+	rm $fileNoExt".exe"
+fi
+
 echo '-------'
 echo 'performing cleanup'
 

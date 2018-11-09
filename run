@@ -27,7 +27,7 @@ if [ $# -gt 0 ]; then
     compileWith="-std=c++${1}"
 fi
 
-g++ $myfile -g -O2 $compileWith -Wno-unused-parameter -Wall -Wextra -Wconversion -Wshadow -Wfatal-errors -o sol || exit
+g++ $myfile -g $compileWith -Wno-unused-parameter -Wall -Wextra -Wconversion -Wshadow -Wfatal-errors -o sol || exit
 
 # Option 4: 
 # this way changes the usage so you don't have to type the .cc after the 
@@ -38,7 +38,6 @@ g++ $myfile -g -O2 $compileWith -Wno-unused-parameter -Wall -Wextra -Wconversion
 # expects output files to diff against of the form 1.out, or, 1.ans, etc. (first char after '.' is o or a, followed by 2 more characters)
 for i in *.in; do
     echo --- $i
-    # ./sol < $i > o && (diff -u o ${i::-3}.[ao]??) | colordiff
-    ./sol < $i > o && (diff -y o ${i::-3}.[ao]?? > t || cat t) || cat o
+    ./sol < $i > o && (diff -Z -y o ${i::-3}.[ao]?? > t || cat t) || cat o
 done
 
