@@ -1,0 +1,4 @@
+\contentsline {subsection}{\numberline {1}Basics}{1}{subsection.0.1}
+\contentsline {subsubsection}{\numberline {1.1}Cross product}{1}{subsubsection.0.1.1}
+\contentsline {subsection}{\numberline {2}Examples}{1}{subsection.0.2}
+\contentsline {paragraph}{Matrices}{1}{paragraph*.1}
