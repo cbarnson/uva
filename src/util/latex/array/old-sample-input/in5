@@ -1,4 +1,0 @@
-0 1 \epsilon
-q_{11} \emptyset \Set{q_{12}} \emptyset
-q_{12} \Set{q_{13}} \Set{q_{12}} \emptyset
-q_{13} \Set{q_{13}} \Set{q_{12}} \emptyset 

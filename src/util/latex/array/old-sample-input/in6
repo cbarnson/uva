@@ -1,5 +1,0 @@
-0 1 \epsilon
-q_{21} \Set{q_{22}} \Set{q_{21}} \emptyset
-q_{22} \Set{q_{23}} \Set{q_{22}} \emptyset
-q_{23} \Set{q_{24}} \Set{q_{23}} \emptyset 
-q_{24} \Set{q_{24}} \Set{q_{24}} \emptyset 

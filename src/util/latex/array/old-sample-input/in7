@@ -1,9 +1,0 @@
-0 1 \epsilon
-q_0 \emptyset \emptyset \Set{q_{11},q_{21}}
-q_{11} \emptyset \Set{q_{12}} \emptyset
-q_{12} \Set{q_{13}} \Set{q_{12}} \emptyset
-q_{13} \Set{q_{13}} \Set{q_{12}} \emptyset 
-q_{21} \Set{q_{22}} \Set{q_{21}} \emptyset
-q_{22} \Set{q_{23}} \Set{q_{22}} \emptyset
-q_{23} \Set{q_{24}} \Set{q_{23}} \emptyset 
-q_{24} \Set{q_{24}} \Set{q_{24}} \emptyset 
