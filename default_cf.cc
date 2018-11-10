@@ -4,6 +4,7 @@ using namespace std;
 
 #if __has_include("default_cf.h")
 #include "default_cf.h"
+#define DEBUG 1
 #endif
 
 typedef long long ll;
