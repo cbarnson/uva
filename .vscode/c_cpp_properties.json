@@ -14,7 +14,9 @@
       "_DEBUG",
       "UNICODE",
       "__GNUC__=7",
-      "__cdecl=__attribute__((__cdecl__))"
+      "__cdecl=__attribute__((__cdecl__))",
+      "FR",
+      "vi"
     ],
     "cppStandard": "c++11",
     "browse": {

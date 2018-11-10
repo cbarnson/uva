@@ -14,7 +14,6 @@
   }
 
 // DEFINITIONS -----------------------------
-
 // vector<T>
 template <typename T, typename... Args>
 void error(istream_iterator<string> it, vector<T> &a, Args... args);
@@ -30,32 +29,43 @@ void error(istream_iterator<string> it, T a, Args... args);
 // empty
 void error(istream_iterator<string> it);
 
+// string
+template <typename T, typename... Args>
+void error(istream_iterator<string> it, const string &a, Args... args);
+
 // vector<T>
 template <typename T, typename... Args>
 void error(istream_iterator<string> it, vector<T> &a, Args... args) {
-  cerr << *it << " = [";
-  for (const auto &x : a) cerr << " " << x;
-  cerr << " ]" << endl;
+  cout << *it << " = [";
+  for (const auto &x : a) cout << " " << x;
+  cout << " ]" << endl;
   error(++it, args...);
 }
 
 // set<T>
 template <typename T, typename... Args>
 void error(istream_iterator<string> it, set<T> &a, Args... args) {
-  cerr << *it << " = {";
-  for (const auto &x : a) cerr << " " << x;
-  cerr << " }" << endl;
+  cout << *it << " = {";
+  for (const auto &x : a) cout << " " << x;
+  cout << " }" << endl;
   error(++it, args...);
 }
 
 // T
 template <typename T, typename... Args>
 void error(istream_iterator<string> it, T a, Args... args) {
-  cerr << *it << " = " << a << endl;
+  cout << *it << " = " << a << endl;
   error(++it, args...);
 }
 
 // empty
 void error(istream_iterator<string> it) {
+  cout << endl;
   return;
+}
+
+template <typename T, typename... Args>
+void error(istream_iterator<string> it, const string &a, Args... args) {
+  cout << a << endl;
+  error(++it, args...);
 }
