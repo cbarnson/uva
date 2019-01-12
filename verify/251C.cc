@@ -26,36 +26,24 @@ ll LCM_k() {
   return ans;
 }
 
-ll BFS(ll from, ll to) {
-  if (from == to) return 0LL;
-
-  queue<ii> q;
-  q.emplace(0LL, from);
-  while (!q.empty()) {
-    auto f = q.front();
-    q.pop();
-
-    ll dist = f.first, val = f.second;
-
-    if (val < 0) {
-      assert(0);
+ll Steps(ll from, ll to) {
+  ll cnt = 0;
+  while (from > to) {
+    ll mx = -1;
+    for (ll i = 2; i <= k && i <= from; i++) {
+      ll j = from % i;
+      ll k = mx == -1 ? 1 : (from % mx);
+      if (j > k) mx = i;
     }
-    if (val == to) {
-      ll result = dist;
-      return result;
-    }
-
-    q.emplace(f.first + 1, f.second - 1);
-
-    for (ll i = 2; i <= k; i++) {
-      if ((val % i) > 1) {
-        ll new_dist = dist + 1LL;
-        ll new_val = val - (val % i);
-        q.emplace(new_dist, new_val);
-      }
-    }
+    if (mx != -1) {
+      assert(mx > 1);
+      ll j = from % mx;
+      assert(j > 0);
+      from = from - (from % mx), cnt++;
+    } else
+      from--, cnt++;
   }
-  assert(0);
+  return cnt;
 }
 
 int main() {
@@ -68,26 +56,22 @@ int main() {
   ll L = LCM_k();
 
   if (L > hi) {
-    cout << BFS(hi, lo) << endl;
+    cout << Steps(hi, lo) << endl;
     return 0;
   }
 
-  // L <= hi
   ll Ln = hi - (hi % L);
-  ll ans = BFS(hi, Ln);
+  // DB(Ln, L, hi, lo);
 
-  if (Ln > lo) {
-    ll L1 = Ln - ((Ln - lo) / L) * L;
-    if (Ln > L1 && L1 >= lo) {
-      ll cnt = (Ln - L1) / L;
-      ll i_val = BFS(L1 + L, L1);
-
-      ans += (cnt * i_val) + BFS(L1, lo);
-      cout << ans << endl;
-      return 0;
-    }
-
-    ans += BFS(Ln, lo);
-    cout << ans << endl;
+  ll ans;
+  if (Ln <= hi && Ln >= lo && ((Ln - lo) >= L)) {
+    ll i = (Ln - lo) / L;
+    ll j = (Ln - lo) % L;
+    ans = Steps(hi, Ln) + (i * Steps(Ln, Ln - L)) + Steps(lo + j, lo);
+  } else if (Ln <= hi && Ln >= lo && ((Ln - lo) < L)) {
+    ans = Steps(hi, Ln) + Steps(Ln, lo);
+  } else {
+    ans = Steps(hi, lo);
   }
+  cout << ans << endl;
 }

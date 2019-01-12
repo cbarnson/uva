@@ -1,3 +1,18 @@
+#ifndef PR
+#define PR(a, n)         \
+  {                      \
+    cout << #a << " = "; \
+    FR(i, n)             \
+    cout << a[i] << ' '; \
+    cout << endl;        \
+  }
+#endif
+
+#ifndef FF
+#define FF(i, begin, end)                             \
+  for (__typeof(end) i = (begin) - ((begin) > (end)); \
+       i != (end) - ((begin) > (end)); i += 1 - 2 * ((begin) > (end)))
+#endif
 
 #ifndef FR
 #define FR(i, n) for (int i = 0; i < (n); ++i)
