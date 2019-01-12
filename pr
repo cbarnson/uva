@@ -1,0 +1,8 @@
+#!/bin/bash
+
+f=`ls -t1 *.py | head -n 1`
+echo $f
+for i in *.in; do
+    echo --- $i
+    ./$f < $i > o && (diff -Z -y o ${i::-3}.[ao]?? > t || cat t) || cat o
+done

@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+# python virtual env
+uva-env/
+
 # Compiled Object files
 *.slo
 *.lo
