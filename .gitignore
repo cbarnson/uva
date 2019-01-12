@@ -43,3 +43,5 @@ out
 
 # VS Code files
 /.vscode/*
+
+.vscode/
