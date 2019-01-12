@@ -1,8 +1,8 @@
 #!/bin/sh
 
-SHEBANG=#!/usr/bin/python3
+SHEBANG=#!python
 PY_EXT=.py
-TEMPLATE=$HOME/uva/src/templates/template${PY_EXT}
+TEMPLATE=$HOME/uva/default_cf${PY_EXT}
 
 timestamp() {
   echo "# Created on   : "$(date +"%Y-%m-%d %H:%M:%S")
