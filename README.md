@@ -7,12 +7,33 @@ This repository was originally for UVa Online Judge solutions, but has expanded 
 
 ## Getting started
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
+Most C++ programs you'll find in this repository are standalone, single-file.  Most competitive programming contests and sites offer GNU GCC, so that's generally what we want to build with.  But you *always* want to use the same compiler as the judging system you'll be submitting against, so don't just fire up your Visual Studio IDE without a second thought.  Problems are meant to be solved in a contest-setting, which means (ideally) your code is relatively short, and certainly a single source file.   Most people opt for a lighter editor like [Emacs](https://www.gnu.org/software/emacs/), [Vim](https://www.vim.org/), or [VS Code](https://code.visualstudio.com/).  
 
-Most C++ programs you'll find in this repository are standalone, single-file.  Compilation is almost always the same: `g++ -std=c++17 -Wall <compile options> file.cc -o solution.exe`, with input being piped in from a file, e.g. `./solution.exe < input.txt`, and output to standard out (redirect to file with `./solution.exe < input.txt > output.txt`).
+### Compile / debugging
 
-However I use several helper scripts to make this process of setup, testing, comparing, and (finally) submitting a little bit easier.  These scripts constitute a variety of `bash`, `sh`, `batch`, and `python` files.  The ones I use often are probably scattered about in the root of this workspace, and others have been archived to `/archives/scripts`.  Have a look, hopefully you'll find something that works.
+Compilation is almost always the same (see below), and you run your executable with input being piped in from a file, e.g. `./solution.exe < input.txt`, and output to standard out (redirect to file with `./solution.exe < input.txt > output.txt`).
+
+I use several helper scripts to make this process of setup, testing, comparing, and (finally) submitting a little bit easier.  These scripts constitute a variety of `bash`, `sh`, `batch`, and `python` files.  The ones I use often are probably scattered about in the root of this workspace, and others have been archived to `/archives/scripts`.  Have a look, hopefully you'll find something that works.
+
+On Windows, I've recently enjoyed using [MSYS2](http://www.msys2.org/) since you get `pacman`.  But you can also try [Cygwin](https://www.cygwin.com/), or you can download [MinGW-64](https://mingw-w64.org) and use a MinTTY emulator like [Git-bash](https://gitforwindows.org/).  On Linux, just use whatever you have, as `GCC` is pretty universally accessible (on new setups of say, Ubuntu for example, you may need to run `sudo apt-get install build-essential`).
+
+Once you're all setup, with your solution contained in a single C++ source file like `main.cc` file ready to go, compile with:
+
+```shell
+g++ -std=c++17 -Wall main.cc -o main.exe
+```
+
+### Submission (CodeForces)
+
+Lets say you are solving problem `1102E` on CodeForces ([here](https://codeforces.com/problemset/problem/1102/E)).  You want to submit.  From the problem page, on the side bar *select the language* and compiler:
+
+<img src="res/codeforces-submit.png">
+
+### Submission (UVa Online Judge)
+
+Lets say you are solving problem `137` on UVa ([here](https://uva.onlinejudge.org/external/1/137.pdf)).  You want to submit.  From the main site: https://uva.onlinejudge.org/, login, and navigate to "Quick Submissions" on the side bar.  From here, choose your compiler and either paste in your code or upload the source file. 
+
+<img src="res/uva-submit.png">
 
 <!-- ### Initial Configuration
 
