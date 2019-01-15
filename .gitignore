@@ -36,6 +36,9 @@ uva-env/
 
 # uva-node npm package
 uva-node/
+node_modules/
+package-lock.json
+package.json
 
 # Problem temp files
 in
