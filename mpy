@@ -7,5 +7,10 @@ if [ -d "src/python/py-accepted" ] ; then
     mv $file "src/python/py-accepted"
 fi
 
+# equivalently,
+find -maxdepth 1 -name "[0-9].in" -delete
+find -maxdepth 1 -name "[0-9].out" -delete
+
+
 echo "all done"
 exit
