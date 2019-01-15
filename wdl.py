@@ -189,79 +189,79 @@ def parse_single_problem(problem, letter):
 
 
 # Parses each problem page.
-def parse_problem(folder, contest, problem):
-    url = 'http://codeforces.com/contest/%s/problem/%s' % (contest, problem)
-    html = urlopen(url).read()
-    parser = CodeforcesProblemParser(folder)
-    parser.feed(html.decode('utf-8')) 
-    # .encode('utf-8') Should fix special chars problems?
-    return parser.num_tests
+# def parse_problem(folder, contest, problem):
+#     url = 'http://codeforces.com/contest/%s/problem/%s' % (contest, problem)
+#     html = urlopen(url).read()
+#     parser = CodeforcesProblemParser(folder)
+#     parser.feed(html.decode('utf-8')) 
+#     # .encode('utf-8') Should fix special chars problems?
+#     return parser.num_tests
 
 # Parses the contest page.  
-def parse_contest(contest):
-    url = 'http://codeforces.com/contest/%s' % (contest)
-    html = urlopen(url).read()
-    parser = CodeforcesContestParser(contest)
-    parser.feed(html.decode('utf-8'))
-    return parser
+# def parse_contest(contest):
+#     url = 'http://codeforces.com/contest/%s' % (contest)
+#     html = urlopen(url).read()
+#     parser = CodeforcesContestParser(contest)
+#     parser.feed(html.decode('utf-8'))
+#     return parser
 
 # Generates the test script.
-def generate_test_script(folder, num_tests, problem):
-    with open(folder + 'test.sh', 'w') as test:
-        test.write(
-            ('#!/bin/bash\n'
-            'DBG=""\n'
-            'while getopts ":d" opt; do\n'
-            '  case $opt in\n'
-            '    d)\n'
-            '      echo "-d was selected; compiling in DEBUG mode!" >&2\n'
-            '      DBG="-DDEBUG"\n'
-            '      ;;\n'
-            '    \?)\n'
-            '      echo "Invalid option: -$OPTARG" >&2\n'
-            '      ;;\n'
-            '  esac\n'
-            'done\n'
-            '\n'
-            'echo Compiling...\n'
-            'if ! '+COMPILE_CMD+' {0}.cc; then\n'
-            '    exit\n'
-            'fi\n'
-            'INPUT_NAME='+SAMPLE_INPUT+'\n'
-            'OUTPUT_NAME='+SAMPLE_OUTPUT+'\n'
-            'MY_NAME='+MY_OUTPUT+'\n').format(problem))
-        test.write(
-            'for test_file in $INPUT_NAME*\n'
-            'do\n'
-            '    i=$((${{#INPUT_NAME}}))\n'
-            '    test_case=${{test_file:$i}}\n'
-            '    rm -R $MY_NAME* 2> /dev/null\n'
-            '    if ! {5} ./a.out < $INPUT_NAME$test_case > $MY_NAME$test_case; then\n'
-            '        echo {1}{4}Sample test \#$test_case: Runtime Error{2} {6}\n'
-            '        echo ========================================\n'
-            '        echo Sample Input \#$test_case\n'
-            '        cat $INPUT_NAME$test_case\n'
-            '    else\n'
-            '        if diff --brief $MY_NAME$test_case $OUTPUT_NAME$test_case > /dev/null; then\n'
-            '            echo {1}{3}Sample test \#$test_case: Accepted{2} {6}\n'
-            '        else\n'
-            '            echo {1}{4}Sample test \#$test_case: Wrong Answer{2} {6}\n'
-            '            echo ========================================\n'
-            '            echo Sample Input \#$test_case\n'
-            '            cat $INPUT_NAME$test_case\n'
-            '            echo ========================================\n'
-            '            echo Sample Output \#$test_case\n'
-            '            cat $OUTPUT_NAME$test_case\n'
-            '            echo ========================================\n'
-            '            echo My Output \#$test_case\n'
-            '            cat $MY_NAME$test_case\n'
-            '            echo ========================================\n'
-            '        fi\n'
-            '    fi\n'
-            '    rm -R $MY_NAME* 2> /dev/null\n'
-            'done\n'
-            .format(num_tests, BOLD, NORM, GREEN_F, RED_F, TIME_CMD, TIME_AP))
-    call(['chmod', '+x', folder + 'test.sh'])
+# def generate_test_script(folder, num_tests, problem):
+#     with open(folder + 'test.sh', 'w') as test:
+#         test.write(
+#             ('#!/bin/bash\n'
+#             'DBG=""\n'
+#             'while getopts ":d" opt; do\n'
+#             '  case $opt in\n'
+#             '    d)\n'
+#             '      echo "-d was selected; compiling in DEBUG mode!" >&2\n'
+#             '      DBG="-DDEBUG"\n'
+#             '      ;;\n'
+#             '    \?)\n'
+#             '      echo "Invalid option: -$OPTARG" >&2\n'
+#             '      ;;\n'
+#             '  esac\n'
+#             'done\n'
+#             '\n'
+#             'echo Compiling...\n'
+#             'if ! '+COMPILE_CMD+' {0}.cc; then\n'
+#             '    exit\n'
+#             'fi\n'
+#             'INPUT_NAME='+SAMPLE_INPUT+'\n'
+#             'OUTPUT_NAME='+SAMPLE_OUTPUT+'\n'
+#             'MY_NAME='+MY_OUTPUT+'\n').format(problem))
+#         test.write(
+#             'for test_file in $INPUT_NAME*\n'
+#             'do\n'
+#             '    i=$((${{#INPUT_NAME}}))\n'
+#             '    test_case=${{test_file:$i}}\n'
+#             '    rm -R $MY_NAME* 2> /dev/null\n'
+#             '    if ! {5} ./a.out < $INPUT_NAME$test_case > $MY_NAME$test_case; then\n'
+#             '        echo {1}{4}Sample test \#$test_case: Runtime Error{2} {6}\n'
+#             '        echo ========================================\n'
+#             '        echo Sample Input \#$test_case\n'
+#             '        cat $INPUT_NAME$test_case\n'
+#             '    else\n'
+#             '        if diff --brief $MY_NAME$test_case $OUTPUT_NAME$test_case > /dev/null; then\n'
+#             '            echo {1}{3}Sample test \#$test_case: Accepted{2} {6}\n'
+#             '        else\n'
+#             '            echo {1}{4}Sample test \#$test_case: Wrong Answer{2} {6}\n'
+#             '            echo ========================================\n'
+#             '            echo Sample Input \#$test_case\n'
+#             '            cat $INPUT_NAME$test_case\n'
+#             '            echo ========================================\n'
+#             '            echo Sample Output \#$test_case\n'
+#             '            cat $OUTPUT_NAME$test_case\n'
+#             '            echo ========================================\n'
+#             '            echo My Output \#$test_case\n'
+#             '            cat $MY_NAME$test_case\n'
+#             '            echo ========================================\n'
+#             '        fi\n'
+#             '    fi\n'
+#             '    rm -R $MY_NAME* 2> /dev/null\n'
+#             'done\n'
+#             .format(num_tests, BOLD, NORM, GREEN_F, RED_F, TIME_CMD, TIME_AP))
+#     call(['chmod', '+x', folder + 'test.sh'])
 
 from pathlib import Path
 import datetime
@@ -270,38 +270,45 @@ import datetime
 def main():
     # only downloading for 1 single problem
     if(len(argv) < 3):
-        print('USAGE: ./dl.py 512 A')
+        print('USAGE: ./wdl.py 512 A')
         return
     problem = argv[1]
     letter = argv[2]
-    target = "%s%s" % (problem, letter)
+    ext = '.py'
+    target = "%s%s%s" % (problem, letter, ext)
 
     print('Target codeforces problem: %s' % target)
     x = parse_single_problem(problem, letter)
-    print('Creating C++ template problem %s...' % (target))    
 
-    cppTemplate = Path(TEMPLATE)
-    targetCpp = target + '.cc'
-    if (cppTemplate.exists() and cppTemplate.is_file()):
-        print('Copying...')
-        call('cp -n %s %s' % (TEMPLATE, targetCpp), shell=True)
-        # call(['cp', '-n', TEMPLATE, '%s' % (targetCpp)])
-        call("ls")
-        print('Adding header...')
-        line1 = '// Created on : {:%Y-%b-%d %H:%M:%S}'.format(datetime.datetime.now())
-        call("echo %s | cat - %s > tmp && mv tmp %s" % (line1, targetCpp, targetCpp), shell=True)
-        # call("cat %s" % (targetCpp))
-        # line2 = '// Problem \#    : %s' % (target)
-        print('targetCpp = %s' % targetCpp)
-        line2='// Problem \#\ \ : %s' % target
-        call("echo %s | cat - %s > tmp && mv tmp %s" % (line2, targetCpp, targetCpp), shell=True)
-        call("cat %s" % (targetCpp), shell=True)
+    # template = Path('default_cf.py')
+    # if (template.exists() and template.is_file()):
+    #     call('cp -n %s %s' % (template, target), shell=True)
+    #     call('')
 
-    else:
-        print('ERROR, could not locate C++ Template.  Exiting...')
-        exit()
+    # print('Creating  template problem %s...' % (target))    
 
-    print('All done!')
+    # cppTemplate = Path(TEMPLATE)
+    # targetCpp = target + '.cc'
+    # if (cppTemplate.exists() and cppTemplate.is_file()):
+    #     print('Copying...')
+    #     call('cp -n %s %s' % (TEMPLATE, targetCpp), shell=True)
+    #     # call(['cp', '-n', TEMPLATE, '%s' % (targetCpp)])
+    #     call("ls")
+    #     print('Adding header...')
+    #     line1 = '// Created on : {:%Y-%b-%d %H:%M:%S}'.format(datetime.datetime.now())
+    #     call("echo %s | cat - %s > tmp && mv tmp %s" % (line1, targetCpp, targetCpp), shell=True)
+    #     # call("cat %s" % (targetCpp))
+    #     # line2 = '// Problem \#    : %s' % (target)
+    #     print('targetCpp = %s' % targetCpp)
+    #     line2='// Problem \#\ \ : %s' % target
+    #     call("echo %s | cat - %s > tmp && mv tmp %s" % (line2, targetCpp, targetCpp), shell=True)
+    #     call("cat %s" % (targetCpp), shell=True)
+
+    # else:
+    #     print('ERROR, could not locate C++ Template.  Exiting...')
+    #     exit()
+
+    # print('All done!')
 
     
     # Find contest and problems.

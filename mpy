@@ -1,0 +1,11 @@
+#!/bin/bash
+
+file=`ls -t1 *.py | head -n 1`
+echo $file
+
+if [ -d "src/python/py-accepted" ] ; then
+    mv $file "src/python/py-accepted"
+fi
+
+echo "all done"
+exit
