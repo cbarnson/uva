@@ -38,6 +38,6 @@ echo $myfile
 # expects output files to diff against of the form 1.out, or, 1.ans, etc. (first char after '.' is o or a, followed by 2 more characters)
 for i in *.in; do
     echo --- $i
-    /c/d8/d8.exe $myfile < $i > o && (diff -Z -y o ${i::-3}.[ao]?? > t || cat t) || cat o
+    node $myfile < $i > o && (diff -Z -y o ${i::-3}.[ao]?? > t || cat t) || cat o
 done
 
