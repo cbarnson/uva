@@ -1,0 +1,219 @@
+\ProvidesPackage{defaultHeader}
+
+% \usepackage{nomencl}
+% \makenomenclature
+\RequirePackage{tikz}
+\RequirePackage{ifthen}
+\usepackage{tikz}
+\usetikzlibrary{automata, positioning, shapes, shapes.geometric}
+
+\usepackage{subfig}
+\usepackage{pgf}
+\usepackage{float}
+\usepackage[nottoc]{tocbibind}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{scalerel}
+\usepackage{tabu}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{relsize}
+\usepackage{booktabs}
+\usepackage{verbatim}
+
+\begin{comment}
+Minted package:
+1. Code blocks per language
+\begin{minted}[options]{language}
+\end{minted}
+2. Single line code
+\mint{bash}{echo "hello"}
+3. Inline code
+\mintinline{python}{print(x**2)}
+options:
+========
+linenos: line numbers
+gobble=2 : removes unnecessary leading whitespace characters from output
+mathescape: LaTeX math mode inside of comments
+showspaces : show spaces (look like square cup symbol)
+bgcolor=bg : background color of the box (must be a name, not color command)
+e.g. 
+\definecolor{bg}{rgb}{0.9,0.8,0.7}
+\begin{minted}[bgcolor=bg]{php} ...
+fontfamily=tt : font family to use, default tt, courier and helvetica predefined
+fontsize=14 : font size
+framerule=0.4pt : width of a frame
+framesep=2mm
+numbersep - gap between numbers and start of line, default 12pt
+resetmargins (boolean) - resets left margin inside other environments, default false
+samepage (boolean) - forces whole listing to appear on same page, default false
+stepnumber (integer) - interval that line numbers appear, default 1
+obeytabs(boolean) - treat tabs as tabs, don't convert into spaces
+\end{comment}   
+\usepackage{minted}
+
+% important for this to be near end
+\usepackage{hyperref}
+
+
+% The PDF file can be further personalized to add additional information and change the way the PDF viewer displays it. Below an example:
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    bookmarks=true,
+    pdfpagemode=FullScreen,
+}
+
+\urlstyle{same}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+
+\theoremstyle{definition}
+\newtheorem{proposition}{Proposition}[section]
+
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{remark}{Remark}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+
+\theoremstyle{definition}
+\newtheorem*{solution}{Solution}
+
+\newcommand\SetSymbol[1][]{\nonscript\:#1\vert\allowbreak\nonscript\:\mathopen{}}
+\providecommand\given{}
+\DeclarePairedDelimiterX\Set[1]\{\}{\renewcommand\given{\SetSymbol[\delimsize]}#1}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+% Cyclic subgroups of the form <a> or <G> (group theory)
+\newcommand{\cyc}[1]{\ensuremath{\langle {#1} \rangle}}
+
+
+% C++ typesetting for code; usage: \begin{lstlisting} ... \end{lstlisting}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+\definecolor{darkgreen}{rgb}{0.0,0.5,0.0}
+\lstset{
+    backgroundcolor=\color{lbcolor},
+    tabsize=4,
+    language=[GNU]C++,
+    basicstyle=\scriptsize,
+    upquote=true,
+    aboveskip={1.5\baselineskip},
+    columns=fixed,
+    showstringspaces=false,
+    extendedchars=false,
+    breaklines=true,
+    prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    frame=single,
+    numbers=left,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    identifierstyle=\ttfamily,
+    keywordstyle=\color[rgb]{0,0,1},
+    commentstyle=\color[rgb]{0.026,0.112,0.095},
+    stringstyle=\color[rgb]{0.627,0.126,0.941},
+    numberstyle=\color[rgb]{0.205, 0.142, 0.73},
+    %   rulecolor=,
+    %   \lstdefinestyle{C++}{language=C++,style=numbers}’.
+}
+\lstset{
+    backgroundcolor=\color{lbcolor},
+    tabsize=4,
+    language=C++,
+    captionpos=b,
+    tabsize=3,
+    frame=lines,
+    numbers=left,
+    numberstyle=\tiny,
+    numbersep=5pt,
+    breaklines=true,
+    showstringspaces=false,
+    basicstyle=\footnotesize,
+    keywordstyle=\color[rgb]{0,0,1},
+    commentstyle=\color{darkgreen},
+    stringstyle=\color{red}
+}
+
+% colors you can use for minted bgcolor=colorname
+\definecolor{LightGray}{gray}{0.9}
+\definecolor{DarkGray}{gray}{0.1}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+
+% configuration: minted
+\newminted{cpp}     {frame=lines,framesep=2mm,fontsize=\footnotesize,bgcolor=LightGray,tabsize=4,numbersep=4pt,resetmargins,samepage,mathescape,linenos,gobble=2}
+\newminted{python}  {frame=lines,framesep=2mm,fontsize=\footnotesize,tabsize=4,numbersep=4pt,resetmargins,samepage,mathescape,linenos,gobble=2}
+\newminted{bash}    {frame=lines,framesep=2mm,fontsize=\footnotesize,tabsize=4,numbersep=4pt,resetmargins,samepage,mathescape,linenos,gobble=2}
+\newminted{perl}    {frame=lines,framesep=2mm,fontsize=\footnotesize,tabsize=4,numbersep=4pt,resetmargins,samepage,mathescape,linenos,gobble=2}
+\newmint{perl}      {frame=lines,framesep=2mm,fontsize=\footnotesize,tabsize=4,numbersep=4pt,resetmargins,mathescape,samepage,linenos}
+\newmint{cpp}       {frame=lines,framesep=2mm,fontsize=\footnotesize,tabsize=4,numbersep=4pt,resetmargins,mathescape,samepage,linenos}
+\newmint{python}    {frame=lines,framesep=2mm,fontsize=\footnotesize,tabsize=4,numbersep=4pt,resetmargins,samepage,mathescape,linenos}
+\newmint{bash}      {frame=lines,framesep=2mm,fontsize=\footnotesize,tabsize=4,numbersep=4pt,resetmargins,mathescape,samepage,linenos}
+
+
+% --- End of proof black square (remove if you want default hollow white square)
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+% \titlespacing*{\section}
+% {0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+% \titlespacing*{\subsection}
+% {0pt}{5.5ex plus 1ex minus .2ex}{4.3ex plus .2ex}
+
+
+% subsections like 1.a, 1.b, ...
+% \renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+% subsections like 1.1, 1.2, ...
+% \renewcommand{\thesubsection}{\arabic{subsection}}
+
+% subsubsections like 1.1.1, 1.1.2, ...
+% \renewcommand{\thesubsubsection}{\thesubsection.\alph{subsubsection}}
+
+% adds some extra spacing around the \lor and \land commands, looks better
+% but not a big deal
+% ---- logical or and, spacing (START) ----
+\let\oldlor\lor
+\renewcommand{\lor}{\ensuremath{\; \oldlor \;}}
+\let\oldland\land
+\renewcommand{\land}{\ensuremath{\; \oldland \;}}
+% ---- logical or and, spacing (END) ----
+
+% for group theory, shortcut for commonly used Ker \phi
+\newcommand{\kernel}{\ensuremath{Ker\,\phi}}
+
+% ---- absolute value (START)----
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the 
+% starred version does not.
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+% 
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+\newcommand*{\Value}{\frac{1}{2}x^2}%
+% ---- absolute value (END)----
+
+% ---- divides and not divides (START) ----
+\newcommand{\divs}{\ensuremath{\mathlarger{\mathlarger{\;\mid\;}}}}
+\newcommand{\ndivs}{\ensuremath{\mathlarger{\mathlarger{\;\nmid\;}}}}
+% ---- divides and not divides (START) ----
