@@ -1,69 +1,187 @@
-#!/bin/sh
+#!/bin/bash
 
-# variables
-FILES=(in out)
-DIRECTORY=$HOME/uva/src/accepted
-CPP_EXT=.cc
-TEMPLATE=$HOME/uva/src/templates/template${CPP_EXT}
+# input
 
-# Usage preamble:
-echo "Usage:" $0 "<next problem> <completed prob file in $(pwd) to move to ${DIRECTORY}>"
-echo "No args: refresh I/O files"
-echo "1 arg  : refresh I/O, make copy of template and set filename to argument 1"
-echo "2 arg  : see above, and moves file indicated by filename in arg 2 to ${DIRECTORY}"
-echo "e.g."
-echo "$0 123 456"
-echo ""
+if [ "$#" -lt 2 ]; then
+    echo "Error, invalid number of arguments..."
+    echo "Usage: new.sh cc|py|js 123 [A]"
+    exit
+else
+    echo "good"
+fi
 
-timestamp() {
-  echo "// Created on   : "$(date +"%Y-%m-%d %H:%M:%S")
+if [ "$#" -ge 3 ]; then
+    dl="$3"
+fi
+
+ext="$1"
+
+if [ -n ${dl} ]; then
+    base="$2$3"
+else
+    base="$2"
+fi
+filename="${base}.${ext}"
+
+
+print() {
+    echo "---------------------------------"
+    echo "Settings"
+    echo "---------------------------------"
+    echo "Mode    : ${ext}"
+    echo "Target  : ${base}"
+    echo "Filename: ${filename}"
+    echo "---------------------------------"
+}
+print
+
+
+cc_new() {
+    pn="// Problem #    : ${base}"
+    ts="// Created on   : "$(date +"%Y-%m-%d %H:%M:%S")
+    if [ -f "default_cf.cc" ]; then
+        echo "good, found template"
+        cp "default_cf.cc" "${filename}"
+        ls
+        echo "created copy of template"
+        echo "now adding header"
+        echo "$ts" | cat - ${filename} > tmp && mv tmp ${filename}
+        echo "$pn" | cat - ${filename} > tmp && mv tmp ${filename}
+        ls
+        echo "--------------"
+        cat ${filename}
+        echo "--------END-----"
+    fi
 }
 
-# create blank I/O files
-for f in ${FILES[@]}
-do
-  if [ -f ${f} ]; then
-    rm ${f}
-    touch ${f}
-  fi
-done
+py_new() {
+    sb="#! python"
+    pn="# Problem #    : ${base}"
+    ts="# Created on   : "$(date +"%Y-%m-%d %H:%M:%S")
+    if [ -f "default_cf.py" ]; then
+        echo "good, found template"
+        cp "default_cf.py" "${filename}"
+        ls
+        echo "created copy of template"
+        echo "now adding header"
+        echo "$ts" | cat - ${filename} > tmp && mv tmp ${filename}
+        echo "$pn" | cat - ${filename} > tmp && mv tmp ${filename}
+        echo ""    | cat - ${filename} > tmp && mv tmp ${filename}
+        echo "$sb" | cat - ${filename} > tmp && mv tmp ${filename}
+        ls
+        echo "--------------"
+        cat ${filename}
+        echo "--------END-----"
+    fi
+}
 
-# 1st optional argument: 
-# if have TEMPLATE, and > 0 arguments, use 1st arg to create new file as copy of TEMPLATE and rename
-if [ -f ${TEMPLATE} ]; then
-  if [ "$#" -gt 0 ]; then
-    echo $1${CPP_EXT}
-    timestamp | cat - ${TEMPLATE} > tmp && mv tmp $1${CPP_EXT}
-    echo "// Problem #    : "$1 | cat - $1${CPP_EXT} > tmp && mv tmp $1${CPP_EXT}
-    sed -i 's/\r//' $1${CPP_EXT}
-  fi
+js_new() {
+    pn="// Problem #    : ${base}"
+    ts="// Created on   : "$(date +"%Y-%m-%d %H:%M:%S")
+    if [ -f "default_cf.js" ]; then
+        echo "good, found template"
+        cp "default_cf.js" "${filename}"
+        ls
+        echo "created copy of template"
+        echo "now adding header"
+        echo "$ts" | cat - ${filename} > tmp && mv tmp ${filename}
+        echo "$pn" | cat - ${filename} > tmp && mv tmp ${filename}
+        ls
+        echo "--------------"
+        cat ${filename}
+        echo "--------END-----"
+    fi
+}
+
+echo "Deleting .in and .out files..."
+find -maxdepth 1 -f "*.in" -delete
+find -maxdepth 1 -f "*.out" -delete
+echo "Deleting has completed."
+
+if [ -n ${dl} ]; then
+    if [ -f "wdl.py" ] ; then
+        echo "Downloading sample data from Codeforces..."
+        python wdl.py $2 $3
+        echo "Downloading is complete."
+    fi
 fi
 
-# 2nd optional argument:
-# use 2nd arg as file name (e.g. 123 for 123.cc) to move to accepted
-# DIRECTORY=src/accepted
-if [ "$#" -eq 2 ]; then
-  if [ -f $2${CPP_EXT} ]; then
-    echo moving $2${CPP_EXT} to accepted
+echo "Creating new source template..."
 
-    # be more careful moving this
-    if [ -d "$DIRECTORY" ]; then
-      echo "directory exists"
-      
-      cp $2${CPP_EXT} "$DIRECTORY"/$2${CPP_EXT}
-      if [ -f "$DIRECTORY"/$2${CPP_EXT} ]; then
-        rm $2${CPP_EXT}
-      else
-        echo warning, $2${CPP_EXT} did not copy to "$DIRECTORY" correctly.. skipping removal step
-      fi
-    fi
-
-    # if there was an .exe left behind, remove it
-    if [ -f $2".exe" ]; then
-      echo removing unneeded exe $2".exe"
-      rm $2".exe"
-    fi
-  fi
+if [ "${ext}" == "cc" ] ; then
+    echo "cc mode"
+    cc_new
 fi
 
-echo "Success!"
+if [ "${ext}" == "py" ] ; then
+    echo "py mode"
+    py_new
+fi
+
+if [ "${ext}" == "js" ] ; then
+    echo "js mode"
+    js_new
+fi
+
+echo "Creation is complete."
+
+exit
+
+# t=
+# f=
+
+
+# if [ -n "$1" ]; then
+#     echo "$1 is set to $1"
+# fi
+# exit
+
+
+# t="cc"
+# if [ "$#" -eq 2 ] ; then
+#     t=$1
+#     f=$2
+# else
+#     echo "Usage: run.sh cc|py filename"
+#     echo "----------------------------"
+#     exit
+# fi
+
+# if [ $t == "cc" ] ; then
+#     cc_mode=1
+# fi
+
+# if [ $t == "py" ] ; then
+#     py_mode=1
+# fi
+
+# print() {
+#     echo "Type  : ${t}"
+#     echo "Target: ${f}"
+# }
+# # print
+
+# # if [ -z ${cc_mode} ] ; then
+# #     echo "cc_mode is unset";
+# # else
+# #     echo "cc_mode is set to '$cc_mode'";
+# # fi
+
+# if [ -n "${cc_mode}" ] ; then
+#     echo "set"
+# else
+#     echo "not set"
+# fi
+
+# if [ -n "${py_mode}" ] ; then
+#     echo "set"
+# else
+#     echo "not set"
+# fi
+
+# # if [ cc_mode == 1 ] ; then
+# #     echo "C++ mode"
+# # else if [ py_mode == 1 ] ; then
+# #     echo "Python mode"
+# # fi
+
