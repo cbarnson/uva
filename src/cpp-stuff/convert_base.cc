@@ -15,6 +15,8 @@ typedef long long ll;
 typedef pair<int, int> ii;
 typedef vector<int> vi;
 
+// TODO: convert to python
+// Date: 2019-01-15 17:43:50
 vi convert_base(const vi &x, int a, int b) {
   unsigned long long base10 = 0;
   FR(i, x.size()) base10 += x[i] * pow(a, x.size() - i - 1);

@@ -42,10 +42,14 @@ package-lock.json
 package.json
 
 # Problem temp files
-in
-out
+*.in
+*.out
 
 # VS Code files
 /.vscode/*
 
 .vscode/
+
+# tmp files generated as part of run
+o
+t

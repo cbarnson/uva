@@ -2,5 +2,13 @@
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
     "python.pythonPath": "C:\\Python37\\python.exe",
-    "python.linting.pep8Enabled": false
+    "python.linting.pep8Enabled": false,
+    "files.associations": {
+        "*.cc": "cpp",
+        "*.sty": "latex",
+        ".emacs": "lisp",
+        "Makefile.am": "makefile",
+        "configure.ac": "makefile",
+        "cmath": "cpp"
+    }
 }

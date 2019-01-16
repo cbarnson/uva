@@ -2,8 +2,8 @@
 #define FR(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
 
-#if __has_include("default_cf.h")
-#include "default_cf.h"
+#if __has_include("templates/default_cf.h")
+#include "templates/default_cf.h"
 #define DEBUG 1
 #endif
 
