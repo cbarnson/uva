@@ -14,7 +14,35 @@ if [ "$#" -ge 3 ]; then
     dl="$3"
 fi
 
+
+# list_include_item "10 11 12" "2"
+# Usage: 
+# if `list_include_item "10 11 12" "1"` ; then
+#   echo "yes"
+# else 
+#   echo "no"
+# fi
+function list_include_item {
+  local list="$1"
+  local item="$2"
+  if [[ $list =~ (^|[[:space:]])"$item"($|[[:space:]]) ]] ; then
+    # yes, list include item
+    result=0
+  else
+    result=1
+  fi
+  return $result
+}
+
 ext="$1"
+
+if `list_include_item "cc py js" "$ext"` ; then
+    echo "good"
+else 
+    echo "Error, bad extension."
+    exit
+fi
+
 
 if [ -n ${dl} ]; then
     base="$2$3"
@@ -97,8 +125,8 @@ js_new() {
 }
 
 echo "Deleting .in and .out files..."
-find -maxdepth 1 -f "*.in" -delete
-find -maxdepth 1 -f "*.out" -delete
+find -maxdepth 1 -name "[0-9].in" -delete
+find -maxdepth 1 -name "[0-9].out" -delete
 echo "Deleting has completed."
 
 if [ -n ${dl} ]; then
