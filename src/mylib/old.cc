@@ -5,8 +5,8 @@
 using namespace std;
 
 typedef long long ll;
-typedef pair<int, int> ii; 
-typedef vector<int> vi;    
+typedef pair<int, int> ii;
+typedef vector<int> vi;
 
 // Binomial Coefficient
 // Non-DP method, for when bottom-up DP with:
@@ -16,7 +16,7 @@ ll C(int n, int k) {
    k = min(k, n - k);  // Since C(n, k) == C(n, n - k)
    ll ans = 1;
    for (ll i = 1; i <= k; i++) {
-      ans *= (n - k + i) / i;
+      ans = ans *  (n - k + i) / i;
    }
    return ans;
 }
@@ -37,14 +37,14 @@ bool bipartite(vector<vi> &g, int src) {
       for (auto &v : g[u]) {
        if (u == v)
           return false; // self loops
-       
+
        if (color[v] == -1)
           color[v] = !color[u], q.push(v);
        else if (color[v] == color[u])
           return false;
       }
    }
-   return true;	    
+   return true;
 }
 
 
@@ -62,7 +62,7 @@ bool bipartite(vector<vi> &g, int src) {
 void BFS(vector<vi> &g, int src) {
    int n = g.size();
    vi D(n, -1);
-   D[src] = 0;   
+   D[src] = 0;
    queue<int> q;
    q.push(src);
    while (!q.empty()) {
@@ -246,7 +246,7 @@ int lcsAndPath(int A[MM], int a, int B[MM], int b, int ans[MM]) {
           L[i][j] = 1 + L[i + 1][j + 1];
        else
           L[i][j] = max(L[i + 1][j], L[i][j + 1]);
-   
+
    int i = 0, j = 0, k = 0;
    while (i < a && j < b) {
       if (A[i] == B[j])
@@ -256,7 +256,7 @@ int lcsAndPath(int A[MM], int a, int B[MM], int b, int ans[MM]) {
       else if (L[i + 1][j] < L[i][j + 1])
        j++;
       else
-       j++; // tiebreaker      
+       j++; // tiebreaker
    }
    return L[0][0]; // len, ans has actual values as the path
 }
@@ -273,7 +273,7 @@ vi LIS(vi &A) {
    vi last(n + 1), pos(n + 1), pred(n);
    if (n == 0) return vi();
    last[1] = A[pos[1] = 0];
-   for (int i = 1; i < n; i++) {     
+   for (int i = 1; i < n; i++) {
       int j = upper_bound(begin(last) + 1, begin(last) + len + 1, A[i]) -
        last.begin();
       // Uncomment (and comment above line) for STRICTLY asc (desc)
@@ -284,7 +284,7 @@ vi LIS(vi &A) {
       len = max(len, j);
    }
    // Uncomment if only need length, and end here
-   // return len; 
+   // return len;
    int start = pos[len];
    vi S(len);
    for (int i = len - 1; i >= 0; i--) {
@@ -301,7 +301,7 @@ void LIS_n2_asc(int n) {
    for (int i = n - 1; i >= 0; i--) {
       asc[i] = 1;
       for (int j = i + 1; j < n; j++)
-       if (A[i] < A[j]) asc[i] = max(asc[i], asc[j] + 1);      
+       if (A[i] < A[j]) asc[i] = max(asc[i], asc[j] + 1);
    }
    return asc[0];
 }
@@ -310,8 +310,8 @@ void LIS_n2_desc(int n) {
    vi desc(n, 0);
    for (int i = n - 1; i >= 0; i--) {
       desc[i] = 1;
-      for (int j = i + 1; j < n; j++) 
-       if (A[i] > A[j]) desc[i] = max(desc[i], desc[j] + 1);	       
+      for (int j = i + 1; j < n; j++)
+       if (A[i] > A[j]) desc[i] = max(desc[i], desc[j] + 1);
    }
    return desc[0];
 }
@@ -360,12 +360,12 @@ class MaxMatching {
 public:
    static tuple<int, vi> max_matching(const vector<vi> &g) {
       int m = 0, n = g.size();
-    
+
       for (auto &gg : g) for (int u : gg) m = max(m, u + 1);
-      vi A(m, -1), D(n), used(n);      
+      vi A(m, -1), D(n), used(n);
 
       for (int i = 0, f = 0;; i += f, f = 0) {
-       vi vis(n); 
+       vi vis(n);
        bfs(g, used, A, D);
        FR(u, n) if (!used[u] && dfs(g, vis, used, A, D, u)) f++;
        if (!f) return make_tuple(i, A);
@@ -420,7 +420,7 @@ bool palindrome(string s) {
 
 // RMQ - O(n log(n)), O(1) lookup
 class RMQ {
-public:   
+public:
    vi A; vector<vi> M;
    RMQ(const vi &B) {
       A = B; int n = A.size();
@@ -449,11 +449,11 @@ ll sz; bitset<10000010> p; vi primes;
 void sieve(ll m) {
    sz = m + 1;
    p.set(); p[0] = p[1] = 0;
-   for (ll i = 2; i <= sz; i++) 
+   for (ll i = 2; i <= sz; i++)
       if (p[i]) {
        for (ll j = i * i; j <= sz; j += i) p[j] = 0;
        primes.push_back((int)i);
-      }	    
+      }
 }
 bool isPrime(ll x) {
    if (x <= sz) return p[x];
@@ -489,7 +489,7 @@ public:
           if (r[x] == r[y]) r[y]++;
        }
       }
-   }	    
+   }
 };
 
 int main() {
@@ -497,8 +497,8 @@ int main() {
    ios_base::sync_with_stdio(false);
    cin.tie(NULL);
 
-   
-   
+
+
 
 
 }

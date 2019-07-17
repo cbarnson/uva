@@ -5,10 +5,13 @@
     "python.linting.pep8Enabled": false,
     "files.associations": {
         "*.cc": "cpp",
+        "*.gitattributes": "ignore",
+        "*.html": "html",
         "*.sty": "latex",
         ".emacs": "lisp",
         "Makefile.am": "makefile",
         "configure.ac": "makefile",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "iosfwd": "cpp"
     }
 }
